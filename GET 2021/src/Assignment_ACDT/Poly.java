@@ -17,7 +17,7 @@ public class Poly {
 			
 			
 		}
-		
+		//method to show polynomial
 		private void showPolynomial()
 		{
 			for(int i=degree;i>0;i--)

@@ -104,7 +104,7 @@ public class IntSet {
 	}
 	
 	public static void main(String[] args) {
-			IntSet obj1 = new IntSet();
+			IntSet obj1 = new IntSet(); // object of intset class
 			
 			//function calling to check member
 			int isValueMember = scanner.nextInt();
