@@ -89,6 +89,7 @@ public class ShoppingCart {
 	    }
 	}
 	
+	//method to add new item in the cart
 	public void addNewItemInCart(String newItemName,int newItemQuantity,float newItemPrice)
 	{
 		if(itemDetails.containsKey(newItemName)== false){
@@ -99,12 +100,14 @@ public class ShoppingCart {
     		itemPrice.put(newItemName, itemPrice.get(newItemName)+newItemPrice);}
 	}
 	
+	//method to remove particular item from the cart
 	public void removeItemFromCart(String itemName)
 	{
 		itemDetails.remove(itemName);
 		itemPrice.remove(itemName);
 	}
 	
+	//method to increase quantity of an item
 	public void increaseQuantity(String itemName,int quantityChange)
 	{
 		if(itemDetails.containsKey(itemName)==false)
@@ -113,6 +116,7 @@ public class ShoppingCart {
 			itemDetails.put(itemName,itemDetails.get(itemName)+quantityChange);
 	}
 	
+	//method to decrease quantity of particular item
 	public void decreaseQuantity(String itemName,int quantity)
 	{
 		if(itemDetails.get(itemName)<quantity)
@@ -121,6 +125,7 @@ public class ShoppingCart {
 			itemDetails.put(itemName,itemDetails.get(itemName)-quantity);
 	}
 	
+	//method to generate bill of all item in the cart
 	public void generateBill()
 	{
 	    float bill =0;
@@ -131,6 +136,7 @@ public class ShoppingCart {
 	      System.out.println("Total bill of all item in cart is:- "+ bill);
 	}
 	
+	//method to display the present items of cart
 	public void showCart()
 	{
 		System.out.println("Items present with quantity in the list are:- ");
