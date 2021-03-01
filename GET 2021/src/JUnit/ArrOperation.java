@@ -122,9 +122,8 @@ public class ArrOperation {
 		}
 		return arr;
 	}
-	public static void main(String[] args) {
+	public int[] inputArr(){
 		Scanner scanner = new Scanner(System.in);
-		//method and inputs to find max mirror in java
 		System.out.println("enter array size and elements of array for finding max mirror.");
 		int numberOfElements = scanner.nextInt();
 		int[] arr = new int[numberOfElements];
@@ -132,48 +131,48 @@ public class ArrOperation {
 		for(int i=0;i<numberOfElements;i++){
 			arr[i]= scanner.nextInt();
 		}
-		ArrOperation newArrOperation = new ArrOperation();
-		int maxResult= newArrOperation.findLargestMirror(arr);
-		System.out.println("Maximum mirror section is:- "+ maxResult);
+		return arr;
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Input 1 to find mirror section, 2 to find number of clumps.");
+		System.out.println("Input 3 to Solve fixXY problem, 4 to find index of split array.");
 		
-		//method to find number of clumps in array
-		System.out.println("enter array size and elements to find max clumps in array.");
-		int numberOfElements2=  scanner.nextInt();
-		int[] arr2 = new int[numberOfElements2];
-		for(int i=0;i<numberOfElements2;i++)
-			arr2[i] = scanner.nextInt();
-		
-		ArrOperation newArrOperation2 = new ArrOperation();
-		int countClumpsResult = newArrOperation2.findNumberClumps(arr2);
-		System.out.println("Number of clumps in array is:- "+ countClumpsResult);
-		
-		//method to find index where sum of left split is equal to right split
-		System.out.println("enter array size and elements to find index in array");
-		int numberOfElements3 = scanner.nextInt();
-		int[] arr3= new int[numberOfElements3];
-		for(int i=0;i<numberOfElements3;i++)
-			arr3[i]= scanner.nextInt();
-		
-		ArrOperation newArrOperation3 = new ArrOperation();
-		int indexResult = newArrOperation3.findIndexSplitArray(arr);
-		System.out.println("index where left split sum = right split sum:- "+ indexResult);
-		
-		//method to solve fixXY problem
-		System.out.println("enter array size and elements to find index in array:- ");
-		int numberOfElements4 = scanner.nextInt();
-		int[] arr4 = new int[numberOfElements4];
-		for(int i=0;i<numberOfElements4;i++)
-			arr4[i] = scanner.nextInt();
-		
-		int x = scanner.nextInt();
-		int y = scanner.nextInt();
-		ArrOperation newArrOperation4 = new ArrOperation();
-		int[] resultArr = newArrOperation4.fixXY(arr4, x, y);
-		System.out.println("after fixing array:- ");
-		
-		for(int i=0;i<resultArr.length;i++)
-			System.out.print(resultArr[i]+" ");
+		ArrOperation newArrOperation= new ArrOperation();
+		int operationChoiceByUser = scanner.nextInt();
+		//calling method to find largest mirror section in array
+		if(operationChoiceByUser==1){
+			int[] arr =  newArrOperation.inputArr();
+			int maxResult= newArrOperation.findLargestMirror(arr);
+			System.out.println("Maximum mirror section is:- "+ maxResult);
+		}
+		//calling method to find number of clumps in array
+		else if(operationChoiceByUser==2){
+			int[] arr = newArrOperation.inputArr();
+			int countClumpsResult = newArrOperation.findNumberClumps(arr);
+			System.out.println("Number of clumps in array is:- "+ countClumpsResult);
+		}
+		//calling method to solve fixXY problem
+		else if(operationChoiceByUser==3){
+			int[] arr = newArrOperation.inputArr();
+			int x= scanner.nextInt();
+			int y = scanner.nextInt();
+			int[] resultArr = newArrOperation.fixXY(arr, x, y);
+			System.out.println("after fixing array:- ");
+			
+			for(int i=0;i<resultArr.length;i++)
+				System.out.print(resultArr[i]+" ");
 
+		}//calling method to find index of spliting array
+		else if(operationChoiceByUser==4){
+			int[] arr = newArrOperation.inputArr();
+			int indexResult = newArrOperation.findIndexSplitArray(arr);
+			System.out.println("index where left split sum = right split sum:- "+ indexResult);
+		}
+		else{
+			System.out.println("please provide input between 1 to 4.");
+		}
+		
 	}
 
 }
