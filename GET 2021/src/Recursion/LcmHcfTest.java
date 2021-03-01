@@ -11,14 +11,11 @@ import org.junit.runners.Parameterized;
 
 public class LcmHcfTest {
 	private LcmHcf newLcmHcf;
-
 	
 	@Before
 	public void initialize(){
 		newLcmHcf = new LcmHcf();
-	}
-	
-	
+	}		
 	@Test
 	public void testLcm() {
 		assertEquals(64, newLcmHcf.findLCM(4, 64));
@@ -28,5 +25,4 @@ public class LcmHcfTest {
 		assertEquals(6, newLcmHcf.findHCF(366,60));
 	}
 	
-
 }
