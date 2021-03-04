@@ -1,7 +1,7 @@
 package OverviewDataStructures;
 
-import java.util.LinkedList;
 import java.util.Scanner;
+
 public class PolynomialDegree {
     public Node head= null;
     
@@ -43,6 +43,11 @@ public class PolynomialDegree {
 		    System.out.println();
 	    }
     }
+    
+    /**
+     * Method to Find maximum degree of a polynomial
+     * @param headNode containing the first node of a LinkedList
+     */
     public void findDegree(Node headNode) {
     	Node temp1 = headNode;
     	int maxDegree= 0;
@@ -50,21 +55,23 @@ public class PolynomialDegree {
     		String value = temp1.data;
     		int sumDegree= 0;
     		char[] charArr= value.toCharArray();
-    		for(int i= 0; i<charArr.length-1; i++) {
-    			if(charArr[i]== 'x')
-    				sumDegree += charArr[i+1];
-    			else if(charArr[i]== 'y')
-    				sumDegree += charArr[i+1];
-    			else if(charArr[i]== 'z')
-    				sumDegree += charArr[i+1];
-    			else {
+    		for(int i= 0; i< value.length()-1; i++) {
+    			
+    			if(value.charAt(i)== 'x')
+    				sumDegree = sumDegree + Character.getNumericValue(value.charAt(i+1));
+    			else if(value.charAt(i)== 'y')
+    				sumDegree = sumDegree + Character.getNumericValue(value.charAt(i+1));
+    			else if(value.charAt(i)== 'z')
+    				sumDegree = sumDegree + Character.getNumericValue(value.charAt(i+1));
+    			else
     				continue;
-    			}
+    			
     		}
     		if(maxDegree< sumDegree) {
     			maxDegree = sumDegree;
     			sumDegree= 0;
     		}
+    		temp1= temp1.next;
     	}
     	System.out.println("Maximum degree is:- "+ maxDegree);
     }
@@ -82,7 +89,7 @@ public class PolynomialDegree {
     for(int i=0;i< arr.length; i++)
         newPolynomialDegree.insertInBegin(arr[i]);
     
+    newPolynomialDegree.display();
     newPolynomialDegree.findDegree(newPolynomialDegree.head);
-    //newPolynomialDegree.display();
     }
 }
