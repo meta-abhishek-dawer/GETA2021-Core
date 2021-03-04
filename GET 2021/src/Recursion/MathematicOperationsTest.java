@@ -2,23 +2,19 @@ package Recursion;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Arrays;
-import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
-public class LcmHcfTest {
-	private LcmHcf newLcmHcf;
+public class MathematicOperationsTest {
+	private MathematicOperations newLcmHcf;
 	
 	@Before
 	public void initialize(){
-		newLcmHcf = new LcmHcf();
+		newLcmHcf = new MathematicOperations();
 	}		
 	@Test
 	public void testLcm() {
-		assertEquals(64, newLcmHcf.findLCM(4, 64));
+		assertEquals(0, newLcmHcf.findLCM(100, 0));
 	}
 	@Test
 	public void testHcf(){

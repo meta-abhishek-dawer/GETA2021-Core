@@ -35,6 +35,7 @@ public class Search {
 		else 
 			System.out.println("element found at index "+binarySearchResult+" in aray.");
 	}
+	
 	/**
 	 * Find element in array using linear search
 	 * @param arr contain values in which we find
@@ -44,14 +45,23 @@ public class Search {
 	 * @return index if value present else -1 
 	 */
 	public int linearSearch(int[] arr, int start, int end, int searchElement){
-		if(end<start)
-			return -1;
-		if(arr[start]== searchElement)
-			return start;
-		if(arr[end]== searchElement)
-			return end;
-		return linearSearch(arr,start+1, end-1, searchElement);
+		try {
+			if(arr.length== 0)
+				throw new AssertionError();
+		    if(end<start)
+			    return -1;
+		    if(arr[start]== searchElement)
+			    return start;
+		    if(arr[end]== searchElement)
+			    return end;
+		    return linearSearch(arr,start+1, end-1, searchElement);
+		}
+		catch(AssertionError e) {
+			System.out.println("Array cannot be empty!!");
+		}
+		return -1;
 	}
+	
 	/**
 	 * find element in array using Binary search
 	 * @param arr contain values in which we find
@@ -61,13 +71,21 @@ public class Search {
 	 * @return index if value present else -1
 	 */
 	public int binarySearch(int[] arr, int start, int end, int searchElement){
-		if(start<=end && start<arr.length-1){
-			int middle = start + (end-start)/2;
+		try {
+			if(arr.length== 0)
+				throw new AssertionError();
+		    if(start<=end && start<arr.length-1){
+			    int middle = start + (end-start)/2;
 			if(arr[middle]==searchElement)
-				return middle;
+			    return middle;
 			if(arr[middle]> searchElement)
-				return binarySearch(arr, start, middle-1, searchElement);
+			    return binarySearch(arr, start, middle-1, searchElement);
 			return binarySearch(arr, middle+1, end, searchElement);
+		    }
+		    return -1;
+		}
+		catch(AssertionError e) {
+			System.out.println("Array cannot be empty!!");
 		}
 		return -1;
 	}

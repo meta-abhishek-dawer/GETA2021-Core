@@ -22,10 +22,10 @@ public class SearchTest {
 	
 	@Test
 	public void testLinear() {
-		assertEquals(2, newSearch.linearSearch(new int[]{1,  2,  3,  4, 5}, 0, 4,3));
+		assertEquals(-1, newSearch.linearSearch(new int[]{}, 0, 4,3));
 	}
 	@Test
 	public void testBinary(){
-		assertEquals(2, newSearch.binarySearch(new int[]{1,  2,  3,  4, 5}, 0, 4,3));
+		assertEquals(-1, newSearch.binarySearch(new int[]{}, 0, 4,3));
 	}
 }
