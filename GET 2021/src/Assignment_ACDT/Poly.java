@@ -4,95 +4,116 @@ import java.util.Scanner;
 
 public class Poly {
     static Scanner scanner = new Scanner(System.in);
-    private int degree;
     private int[] cofficient;
-		
-    private Poly(){
-	    degree = scanner.nextInt();
-	    cofficient = new int[degree + 1];	
-	    for(int i= 0; i< degree + 1; i++)
-		    cofficient[i] = scanner.nextInt();
-	}
-	//method to show polynomial
-	private void showPolynomial(){
-		for(int i= degree; i> 0; i--){
-			System.out.print(cofficient[i] + "X" + i + " + ");
-		}
-		System.out.print(cofficient[0]);
-		System.out.println();
-	}
 	
-	// get degree of polynomial
+	/**
+	 * Method to get degree of a polynomial
+	 * @return degree
+	 */
 	private int degree(){
-		return degree;
+		return cofficient.length-1;
 	}
 	
-	//add two polynomial
-	private static void addPolynomial(int[] polynomial1,int[] polynomial2){
-		int size1 = polynomial1.length;
-		int size2 = polynomial2.length;	
+	/**
+	 * Method to add two polynomial
+	 * @param p1 object of first polynomial
+	 * @param p2 object of second polynomial
+	 * @return addResult object by calculating sum
+	 */
+	private Poly addPoly(Poly p1, Poly p2){
+		int size1 = p1.cofficient.length;
+		int size2 = p2.cofficient.length;	
 		int size = Math.max(size1, size2);
-		int[] sumPolynomial = new int[size];
+		Poly addResult = new Poly();
+		addResult.cofficient = new int[size];
+		
 		for(int i= 0; i< size1;i++)
-			sumPolynomial[i] = polynomial1[i];
+			addResult.cofficient[i] = p1.cofficient[i];
 			
 		for(int i= 0; i< size2; i++)
-			sumPolynomial[i] += polynomial2[i];
+			addResult.cofficient[i] += p2.cofficient[i];
 			
-		for(int i= sumPolynomial.length - 1;i> 0; i--){
-			System.out.print(sumPolynomial[i] + "X" + i + " + ");
-		}
-		System.out.print(sumPolynomial[0]);
-		System.out.println();
+		return addResult;
 	}
 		
-	//multiply two polynomial
-	private static void multiplyPolynomial(int[] polynomial1,int[] polynomial2){
-		int size1 = polynomial1.length;
-		int size2 = polynomial2.length;
-			
-		int[] product = new int[size1 + size2 - 1];
+	/**
+	 * Method to multiply two polynomial
+	 * @param p1 object of first polynomial
+	 * @param p2 object of second polynomial
+	 * @return multiplyResult object by calculating multiply
+	 */
+	private Poly multiplyPoly(Poly p1, Poly p2){
+		int size1 = p1.cofficient.length;
+		int size2 = p2.cofficient.length;
+		Poly multiplyResult= new Poly();	
+		multiplyResult.cofficient = new int[size1 + size2 - 1];
 		for(int i= 0; i< size1 + size2 - 1; i++)
-			product[i] =0;
+			multiplyResult.cofficient[i] =0;
 			
 		for(int i= 0; i< size1; i++){
 			for(int j= 0; j< size2; j++){
-				product[i+j] += polynomial1[i] * polynomial2[j];
+				multiplyResult.cofficient[i+j] += p1.cofficient[i] * p2.cofficient[j];
 			}
 		}	
-		for(int i= 0; i< size1 + size2 - 1; i++){
-			System.out.print(product[i]+" "); 
-	        if (i != 0){ 
-	        	System.out.print("x" + i); 
-	        } 
-	        if (i != size2 - 1){ 
-	        	System.out.print(" + "); 
-	        } 
-		}
+		return multiplyResult;
 	}
 		
-	//function to evaluate polynomial
-	private double evaluatePolynomial(Poly object, int value){
-		double result = object.cofficient[0];
-		for(int i= 1; i< object.cofficient.length; i++){
-			result = result+ (object.cofficient[i] * Math.pow(value, i));
+	/**
+	 * Method to evaluate Polynomial
+	 * @param value for which we solve equation
+	 * @return result by solving equation
+	 */
+	private float evaluate(float value){
+		float result = this.cofficient[0];
+		for(int i= 1; i< this.cofficient.length; i++){
+			result = result + (float)(this.cofficient[i] * Math.pow(value, i));
 		}
-	return result;
+	    return result;
 	}
-		
+	/**
+	 * Method for taking input of a polynomial
+	 */
+	public void input() {
+		int equationLength= 0;
+		System.out.println("please enter the number for length of equation");
+		equationLength = scanner.nextInt();
+	    this.cofficient = new int[equationLength];
+	    System.out.println("please enter values to make equation:-");
+	    for(int i= 0; i< equationLength ; i++)
+		    this.cofficient[i] = scanner.nextInt();
+	}
+	/**
+	 * Method for taking output of a polynomial
+	 */
+	private void showPolynomial(){
+	    for(int i= this.cofficient.length-1; i> 0; i--){
+		    System.out.print(this.cofficient[i] + "x" + i + " + ");
+		}
+	    System.out.print(this.cofficient[0]);
+		System.out.println();
+	}
+	
 	public static void main(String[] args) {
-		Poly obj1 = new Poly();
-		obj1.showPolynomial();
-		int degree = obj1.degree();
-		System.out.println(degree);
+		Poly newPoly = new Poly();
+		newPoly.input();
+		newPoly.showPolynomial();
+		int degreeResult = newPoly.degree();
+		System.out.println("Degree of a polynomial:- "+degreeResult);
 		
 		int valueForEvaluation = scanner.nextInt();
-		double evaluationResult= obj1.evaluatePolynomial(obj1, valueForEvaluation);
+		float evaluationResult= newPoly.evaluate(valueForEvaluation);
 		System.out.println("ëvaluation of polynomial:- "+ evaluationResult );
 		
-		Poly obj2 = new Poly();
-		addPolynomial(obj1.cofficient, obj2.cofficient);
-		multiplyPolynomial(obj1.cofficient, obj2.cofficient);
+		Poly newPoly2 = new Poly();
+		newPoly2.input();
+		newPoly2.showPolynomial();
+		System.out.println("Addition of two polynomial:- ");
+		Poly addResult= newPoly.addPoly(newPoly, newPoly2);
+		addResult.showPolynomial();
+		
+		System.out.println("multiplication of two polynomial:- ");
+		Poly multiplyResult= newPoly.multiplyPoly(newPoly, newPoly2);
+		multiplyResult.showPolynomial();
 	}
 }
 
