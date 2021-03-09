@@ -1,7 +1,11 @@
 package GraphicsLibrary;
 
 import java.sql.Timestamp;
-
+/**
+ * Interface shape containing different declared methods
+ * @author abhishek.dawer_metac
+ *
+ */
 public interface Shape {
     String getShapeType();
     double getArea();

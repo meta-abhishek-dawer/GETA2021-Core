@@ -1,10 +1,20 @@
 package GraphicsLibrary;
 
 import java.util.ArrayList;
-
+/**
+ * Factory class to create different methods
+ * @author abhishek.dawer_metac
+ *
+ */
 public class ShapeFactory {
     Shape newShape;
-    
+    /**
+     * Method to create objects of different shapes
+     * @param shapeType containing the type of shape
+     * @param point containing coordinate of shapes
+     * @param newArrayList containing the values
+     * @return object of particular created shape
+     */
     public Shape createShape(String shapeType, Point point, ArrayList<Double> newArrayList) {
     	if(shapeType.equals("Square")) {
     		newShape = new Square(point, newArrayList.get(0));
