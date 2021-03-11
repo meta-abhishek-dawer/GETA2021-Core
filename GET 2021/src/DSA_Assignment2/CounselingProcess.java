@@ -79,6 +79,7 @@ public class CounselingProcess {
 			Object[] objectArray = outputHashMap.get(key);
 			int cellNumber =0;
 			for(Object object : objectArray) {
+				System.out.println((String)object);
 				Cell cell = row.createCell(cellNumber++);
 				cell.setCellValue((String)object);
 			}
