@@ -1,0 +1,26 @@
+ER Diagram for StoreFront Application:- 
+
+1. Participating Entities:-
+    a. StoreFront
+    b. Products
+    c. Categories
+    d. Images
+    e. User
+    f. Order
+
+2. Relations:- 
+    a. StoreFront has Products
+    b. Products has different Categories.
+    c. StoreFront has Multiple Users.
+    d. User place Order
+    e. Order has Products.
+    f. Products has Images
+
+3. Key Attributes:-
+   a. StoreFront - store_id
+   b. Products - Product_Id, Product_Name, In_Stock
+   c. Categories - Category_Name, Category_Id, Category_Type
+   d. Images - Image_Id, Image_Name, Image_Title
+   e. Order - Order_Id, OrderItems (Returned, Shipped, Cancelled)
+   f. User - User_ID, UserType (Shopper, Adminstrator)
+   g. Shopper - multiple addresses
