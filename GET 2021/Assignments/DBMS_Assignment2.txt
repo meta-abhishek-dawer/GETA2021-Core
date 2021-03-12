@@ -1,0 +1,72 @@
+Normalization :- Normalization is a database design technique that reduces data redundancy and eliminates undesirable characterestics like Insertion, Updation and deletion
+Anamolies. It basically divides larger table into smaller table and links them using relationships. We use Normalization to remove repeatitive data and stores the data 
+logically.
+
+There are various kinds of Normal Forms which are listed below:- 
+1. 1NF(First Normal Form)
+2. 2NF(Second Normal Form)
+3. 3NF(Third Normal Form)
+4. BCNF(Boyce-Codd Normal Form)
+
+1. 1NF(First Normal Form) :- This form simply says that each cell in a table should exactly contain one value. for example:- 
+    Employee Name    Employee phone no.
+     A               1234567890, 2345698230
+     B               9762303467
+
+  To make it in 1NF:-
+     Employee Name     Employee Phone Number
+       A                1234567890
+       A                2345698230
+       B                9762303467
+
+2. 2NF(Second Normal Form):- for the second normal form, it should follow the two conditions which are listed below:-
+      1. The table shoul be in first normal form
+      2. The primary key of table should compose of exactly 1 column.
+      for example:-
+      Enrollment number  Student Name   Course code
+         1                  A              CS101
+         2                  B              CS102
+         3                  C              CS101
+
+      To convert in 2NF
+       Enrollment Number  Student Name
+         1                  A
+         2                  B
+         3                  C
+
+       Enrollment Number  Course Code
+         1                  CS101
+         2                  CS102
+         3                  CS101
+
+3. 3NF(Third Normal Form):- for the Third Normal for, it should specify the following condition which are listed below:-
+       1. The table should be in second normal form.
+       2. There should not be any functional dependency.
+       for example:-
+       Course Code  Course Venue  Instructor's name  Department
+         CS101       room 1         A                  CS
+         CS102       room 2         B                  ECE
+
+       if we want to change professor name, so also, we have to change department. so, to change in 3NF
+       Course Code   Course Venue   Instructor's id
+        CS101         room 1            1
+        CS102         room 2            2
+       
+       Instructor's Id  Instructor Name  Department
+         1                 A               CS
+         2                 B               ECE
+
+       So, if we want to change professor in a particular course. Then , we just change the id in that course.
+
+4.  BCNF(Boyce Codd Normal Form):- for the BCNF, the table in 3NF. In A --> b, either A is super key or candidate key. for example:-
+        Roll No.  Name  Voter Id
+         1         A      101
+         2         B      102
+         3         C      103
+         4         D      104
+
+        Voter id  age
+         101       20                    super key:- roll no, voter id
+         102       30                    candidate key:-   roll number     Functional Dependency :-  roll no. --> name,  roll no. --> voter id,  voter id:- age, voter id--> roll no.
+         103       35
+         104       15                
