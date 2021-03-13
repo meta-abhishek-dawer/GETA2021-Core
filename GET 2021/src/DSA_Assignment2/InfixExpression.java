@@ -1,7 +1,11 @@
 package DSA_Assignment2;
-
 import java.util.Scanner;
 
+/**
+ * Class to find infix expression of String
+ * @author abhishek.dawer_metac
+ *
+ */
 public class InfixExpression {
 
 	public static void main(String[] args) {
@@ -11,6 +15,7 @@ public class InfixExpression {
         int result= newInfixExpression.evaluateExpression(infix);
         System.out.println(result);
 	}
+	
 	/**
 	 * Method to evaluate the infix expression
 	 * @param expression contains value of Infix

@@ -2,10 +2,17 @@ package DSA_Assignment2;
 
 import java.util.Scanner;
 
+/**
+ * Class queue implementing queue Interface and its methods
+ * @author abhishek.dawer_metac
+ *
+ */
 public class Queue implements QueueInterface{
 	public int currentSize, maxSize;
     public int[] queueElements;
+    
     public int rear, front;
+    
     /**
      * Constructor of a Queue
      * @param size containing size for array
