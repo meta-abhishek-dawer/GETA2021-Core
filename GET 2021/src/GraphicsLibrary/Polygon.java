@@ -54,9 +54,8 @@ public class Polygon implements Shape {
 	 */
 	@Override
 	public boolean isPointEnclosed(Point point) {
-		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate)
-			    || (origin.xAxisCoordinate > point.xAxisCoordinate + side) || (origin.yAxisCoordinate > point.yAxisCoordinate + side))
-				    return false;
+		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate))
+		    return false;
 		return true;
 	}
 	

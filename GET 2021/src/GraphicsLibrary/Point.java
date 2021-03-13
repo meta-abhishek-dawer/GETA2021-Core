@@ -1,5 +1,10 @@
 package GraphicsLibrary;
 
+/**
+ * Class point in which we define coordinates
+ * @author abhishek.dawer_metac
+ *
+ */
 public class Point {
     double xAxisCoordinate, yAxisCoordinate;
     /**

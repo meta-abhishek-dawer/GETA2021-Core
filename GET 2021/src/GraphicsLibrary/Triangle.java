@@ -56,31 +56,22 @@ public class Triangle implements Shape {
 	 */
 	@Override
 	public boolean isPointEnclosed(Point point) {
-		Point point1, point2, point3;
-		point1 = new Point(origin.xAxisCoordinate, origin.yAxisCoordinate);
-		point2 = new Point(origin.xAxisCoordinate + base, origin.yAxisCoordinate);
-		point3 = new Point(origin.xAxisCoordinate, origin.yAxisCoordinate + height);
-		
-		double d1 = sign(point, point1, point2);
-		double d2 = sign(point, point2, point3);
-		double d3 = sign(point, point3, point1);
-		
-		boolean has_negative = (d1 < 0) || (d2 < 0) || (d3 < 0);
-		boolean has_positive = (d1 > 0) || (d2 > 0) || (d3 > 0);
-		
-		return !(has_negative && has_positive);
+		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate))
+		    return false;
+		return true;
 	}
 	
-	public double sign(Point point1, Point point2, Point point3) {
-		return (point1.xAxisCoordinate- point3.xAxisCoordinate) * (point2.yAxisCoordinate- point3.yAxisCoordinate) - 
-				(point2.xAxisCoordinate - point3.xAxisCoordinate) * (point1.yAxisCoordinate - point3.yAxisCoordinate);
-	}
-
+	/**
+	 * Method to get origin of type point
+	 */
 	@Override
 	public Point getOrigin() {
 		return origin;
 	}
 
+	/**
+	 * Method to get TimeStamp
+	 */
 	@Override
 	public Timestamp getTimestamp() {
 		return this.timeStamp;

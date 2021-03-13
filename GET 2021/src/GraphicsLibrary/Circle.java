@@ -1,8 +1,12 @@
 package GraphicsLibrary;
-
 import java.sql.Timestamp;
 import java.util.Date;
 
+/**
+ * Class Circle implementing interface shape and its methods
+ * @author abhishek.dawer_metac
+ *
+ */
 public class Circle implements Shape {
 	double radius;
 	Point origin;

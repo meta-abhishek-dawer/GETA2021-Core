@@ -2,6 +2,7 @@ package GraphicsLibrary;
 
 import java.sql.Timestamp;
 import java.util.Date;
+
 /**
  * Class implementing shape interface and its methods
  * @author abhishek.dawer_metac
@@ -56,9 +57,8 @@ public class Rectangle implements Shape {
 	 */
 	@Override
 	public boolean isPointEnclosed(Point point) {
-		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate)
-		    || (origin.xAxisCoordinate > point.xAxisCoordinate + length) || (origin.yAxisCoordinate > point.yAxisCoordinate + breadth))
-			    return false;
+		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate))
+		    return false;
 		return true;
 	}
 
