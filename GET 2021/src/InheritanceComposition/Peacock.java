@@ -1,11 +1,14 @@
 package InheritanceComposition;
 
-    class Peacock extends Birds {
-    int numberOfPeacockInOneCage;
+/**
+ * Class peacock inheriting parent class Birds
+ * @author abhishek.dawer_metac
+ *
+ */
+class Peacock extends Birds {
     
-	public Peacock(String peacockName, int peacockAge, int peacockWeight, String peacockSound, int peacockInOneCage1, int numberOfBirdsZones, int numberOfCagesInZone) {
-	    super(peacockName, peacockAge, peacockWeight, peacockSound, numberOfBirdsZones, numberOfCagesInZone);
-	    numberOfPeacockInOneCage = peacockInOneCage1;
+	public Peacock(String peacockName, int peacockAge, int peacockWeight, String peacockSound) {
+	    super(peacockName, peacockAge, peacockWeight, peacockSound);
 	}
 	
 	
