@@ -1,7 +1,11 @@
 package Assignment3;
 
 import java.util.Scanner;
-
+/**
+ * Class queue implementing queue methods
+ * @author abhishek.dawer_metac
+ *
+ */
 class PriorityQueue implements PriorityQueueInterface{
     public  Bowler[] bowlerArray;
     public int size, capacity;
@@ -99,50 +103,5 @@ class PriorityQueue implements PriorityQueueInterface{
     public int size() {
 	    return size;
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please Enter size of queue:- ");
-        int queueSize = scanner.nextInt();
-        PriorityQueue newPriorityQueue = new PriorityQueue(queueSize);
-        int input;
-
-        do {
-	        System.out.println("Operations on Priority queue:- ");
- 	        System.out.print("Press 1 to insert, 2 to remove, 3 to check queue is empty, 4 to check full, ");
-	        System.out.println(" 5 to check size");
-	        int selectedInput = scanner.nextInt();
-	        switch(selectedInput) {
-	        case 1:
-	    		System.out.println("Please enter name of job and its priority");
-	    		String jobName = scanner.next();
-	    		int setPrioriry = scanner.nextInt();
-	    		newPriorityQueue.insert(jobName, setPrioriry);
-	    		break;
-	    	
-	    	case 2:
-	    		System.out.println("job removed from queue:- " + newPriorityQueue.remove());
-	    		break;
-	    		
-	    	case 3:
-	    		System.out.println("Queue is empty:- " + newPriorityQueue.isEmpty());
-	    		break;
-	    		
-	    	case 4:
-	    		System.out.println("Queue is full:- " + newPriorityQueue.isFull());
-	    		break;
-	    	
-	    	case 5:
-	    		System.out.println("Size of queue is:- " + newPriorityQueue.size());
-	    		break;
-	    		
-	    	default:
-	    		System.out.println("Please provide input between 1 to 6");
-	    		break;
-	    	}
-	    	System.out.println("Press 1 to continue...");
-	    	input = scanner.nextInt();
-	    }
-	    while(input == 1);
-    }
+    
 }

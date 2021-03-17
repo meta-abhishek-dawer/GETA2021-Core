@@ -2,7 +2,11 @@ package Assignment3;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-
+/**
+ * Class in which we are defining methods
+ * @author abhishek.dawer_metac
+ *
+ */
 public class VirtualCommandPrompt {
     Directory root, currentDirectory;
     
@@ -10,48 +14,12 @@ public class VirtualCommandPrompt {
     	root = new Directory("root");
     	currentDirectory = root;
     }
-    
-    public void runCommand(String string) {
-    	String[] command = string.split(" ");
-    	switch(command[0].toLowerCase()) {
-    	case "mkdir" :
-    		String result = createDirectory(command[1]);
-    		System.out.println(result);
-    		break;
-    		
-    	case "ls" :
-    		listCurrentDirectory();
-    		break;
-    		
-    	case "cd" :
-    		String resultChange = changeDirectory(command[1]);
-    		System.out.println(resultChange);
-    		break;
-    		
-    	case "find" :
-    		ArrayList<String> path = find(command[1]);
-    		for(int i= 0; i< path.size(); i++)
-    			System.out.println(path.get(i));
-    		break;
-    	
-    	case "tree" :
-    		displayDirectory();
-    		break;
-    		
-    	case "bk" :
-    		moveToParent();
-    		break;
-    		
-    	case "exit":
-    		System.exit(0);
-    		break;
-    		
-    	default:
-    		System.out.println("Invalid Input!!!");
-    		break;
-    	}
-    	
-    }
+    /**
+     * Method to create directory
+     * @param name containing directory name
+     * @return result of String type 
+     * throw exception if length of string is zero
+     */
     public String createDirectory(String name) {
     	String result = "";
     	try {
@@ -73,11 +41,19 @@ public class VirtualCommandPrompt {
     	return result;
     }
     
+    /**
+     * Method to get list of Directory
+     */
     public void listCurrentDirectory() {
     	for(Directory newDirectory : currentDirectory.subDirectory)
     		System.out.println(newDirectory.directoryName + " " + newDirectory.timeStamp);
     }
     
+    /**
+     * Method to change directory
+     * @param changeName containing name of directory
+     * @return value of type string
+     */
     public String changeDirectory(String changeName) {
     	for(int i= 0; i< currentDirectory.subDirectory.size(); i++) {
     		String dirName =currentDirectory.subDirectory.get(i).directoryName;
@@ -89,6 +65,12 @@ public class VirtualCommandPrompt {
     	return "No directory present!!";
     }
     
+    /**
+     * Method to check directory is present 
+     * @param name containing name of directory
+     * @param currentDirectory current directory
+     * @return value of type boolean
+     */
     public boolean isDirectoryPresent(String name, Directory currentDirectory) {
     	for(int i= 0; i< currentDirectory.subDirectory.size(); i++) {
     		String dirName =currentDirectory.subDirectory.get(i).directoryName; 
@@ -98,13 +80,20 @@ public class VirtualCommandPrompt {
     	return false;
     }
     
+    /**
+     * Method to move parent directory
+     */
     public void moveToParent() {
     	currentDirectory = currentDirectory.parentDirectory;
     }
     
+    /**
+     * Method to display directory
+     */
     public void displayDirectory() {
     	displayStructure(root);
     }
+    
     public void displayStructure(Directory newDirectory) {
         for(Directory directory : newDirectory.subDirectory) {
         	System.out.println(" " + directory.directoryName);
@@ -112,12 +101,22 @@ public class VirtualCommandPrompt {
         }
     }
     
+    /**
+     * Method  to find directory
+     * @param dirName name of directory
+     * @return path of directory
+     */
     public ArrayList<String> find(String dirName) {
     	ArrayList<String> directoryPaths = new ArrayList<>();
     	findPath(dirName, root, directoryPaths);
     	return directoryPaths;
     }
-    
+    /**
+     * Method to find different paths
+     * @param dirName name of directory
+     * @param newDirectory new directory to check
+     * @param directoryPaths  list for paths
+     */
     public void findPath(String dirName, Directory newDirectory, ArrayList<String> directoryPaths) {
     	for(int i= 0; i< newDirectory.subDirectory.size(); i++) {
     		String currentName = newDirectory.subDirectory.get(i).directoryName;

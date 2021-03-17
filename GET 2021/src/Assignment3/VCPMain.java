@@ -2,16 +2,21 @@ package Assignment3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Driver class of java
+ * @author abhishek.dawer_metac
+ *
+ */
 public class VCPMain {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		int processInput=0;
+		do {
 		System.out.println("Please enter command with name like mkdir filename, ls, cd, find , exit");
 		String input = scanner.nextLine();
 		VirtualCommandPrompt object = new VirtualCommandPrompt();
 		String[] command = input.split(" ");
-		while(true) {
 			switch(command[0].toLowerCase()) {
 	    	case "mkdir" :
 	    		String result = object.createDirectory(command[1]);
@@ -49,7 +54,9 @@ public class VCPMain {
 	    		System.out.println("Invalid Input!!!");
 	    		break;
 	    	}
+			processInput = scanner.nextInt();
 		}
+		while(processInput == 1);
 	}
 
 }

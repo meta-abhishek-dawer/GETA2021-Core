@@ -3,6 +3,11 @@ package Assignment3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class to take input from captain containing input and methods
+ * @author abhishek.dawer_metac
+ *
+ */
 public class CaptainInput {
 	PriorityQueue queue;
 	static Scanner scanner = new Scanner(System.in);
