@@ -12,7 +12,7 @@ public class Rectangle implements Shape {
 	double length, breadth;
 	Point origin;
 	Timestamp timeStamp;
-    final String shapeType = Shape.shapeType.Rectangle.toString();
+    final String shapeType = Shape.shapeType.RECTANGLE.toString();
     
     /**
      * Constructor setting up the values of Rectangle
@@ -30,15 +30,13 @@ public class Rectangle implements Shape {
     /**
      * Method to get the shape type
      */
-	@Override
-	public String getShapeType() {
+	public String getType() {
 		return this.shapeType;
 	}
 
 	/**
 	 * Method to get area of Rectangle
 	 */
-	@Override
 	public double getArea() {
 		return this.length * this.breadth;
 	}
@@ -46,7 +44,6 @@ public class Rectangle implements Shape {
 	/**
 	 * Method to get perimeter of rectangle
 	 */
-	@Override
 	public double getPerimeter() {
 		int number = 2;
 		return 2 * (this.length + this.breadth);
@@ -55,7 +52,6 @@ public class Rectangle implements Shape {
 	/**
 	 * Method to check point is enclosed
 	 */
-	@Override
 	public boolean isPointEnclosed(Point point) {
 		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate))
 		    return false;
@@ -65,7 +61,6 @@ public class Rectangle implements Shape {
 	/**
 	 * method to get origin coordinates of shape
 	 */
-	@Override
 	public Point getOrigin() {
 		return this.origin;
 	}
@@ -73,7 +68,6 @@ public class Rectangle implements Shape {
 	/**
 	 * Method to get time
 	 */
-	@Override
 	public Timestamp getTimestamp() {
 		return this.timeStamp;
 	}

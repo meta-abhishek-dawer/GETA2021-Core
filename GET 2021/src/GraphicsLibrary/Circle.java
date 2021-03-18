@@ -11,7 +11,7 @@ public class Circle implements Shape {
 	double radius;
 	Point origin;
 	Timestamp timeStamp;
-    final String shapeType = Shape.shapeType.Circle.toString();
+    final String shapeType = Shape.shapeType.CIRCLE.toString();
 	/**
 	 * Constructor of a circle
 	 * @param originValue containing coordinate of shape on x axis and y axis
@@ -26,15 +26,13 @@ public class Circle implements Shape {
     /**
      * Method to get the type of Shape
      */
-	@Override
-	public String getShapeType() {
+	public String getType() {
 		return shapeType;
 	}
 
 	/**
 	 * Method to get area of Circle
 	 */
-	@Override
 	public double getArea() {
 		double pi = 3.14;;
 		return pi * radius * radius;
@@ -43,7 +41,6 @@ public class Circle implements Shape {
 	/**
 	 * Method to get area of Perimeter 
 	 */
-	@Override
 	public double getPerimeter() {
 		double pi = 3.14;
 		int number = 2;
@@ -53,7 +50,6 @@ public class Circle implements Shape {
 	/**
 	 * Method to check the point is enclosed or not
 	 */
-	@Override
 	public boolean isPointEnclosed(Point point) {
 		double result = distanceOfTwoPoints(point, origin);
 		 if(result>= radius)
@@ -65,7 +61,6 @@ public class Circle implements Shape {
 	/**
 	 * Method to check the origin point
 	 */
-	@Override
 	public Point getOrigin() {
 		return origin;
 	}
@@ -73,7 +68,6 @@ public class Circle implements Shape {
 	/**
 	 * method to get the Time of shape added
 	 */
-	@Override
 	public Timestamp getTimestamp() {
 		return timeStamp;
 	}

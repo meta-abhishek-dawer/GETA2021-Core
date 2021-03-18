@@ -44,7 +44,7 @@ public class Screen {
     	else {
     		ArrayList<Shape> specificShapesList = new ArrayList<>();
     		for(Shape shape: shapesList) {
-    			if(shape.getShapeType().equals(type))
+    			if(shape.getType().equals(type))
     				specificShapesList.add(shape);
     		}
     		shapesList.removeAll(specificShapesList);
@@ -58,7 +58,7 @@ public class Screen {
     public void showAllAddedShapes() {
     	System.out.println("List of added shapes..");
     	for(Shape newShape : shapesList)
-    		System.out.println(newShape.getShapeType());
+    		System.out.println(newShape.getType());
     }
     
     /**

@@ -11,7 +11,7 @@ public class Triangle implements Shape {
 	double base, height;
 	Point origin;
 	Timestamp timeStamp;
-    final String shapeType = Shape.shapeType.Triangle.toString();
+    final String shapeType = Shape.shapeType.TRIANGLE.toString();
     
     /**
      * Constructor setting up the values
@@ -20,24 +20,22 @@ public class Triangle implements Shape {
      * @param heightValue containing height of triangle
      */
     public Triangle(Point originValue, double baseValue, double heightValue) {
-    this.base = baseValue;
-    this.height = heightValue;
-    this.timeStamp = new Timestamp(new Date().getTime());
-    this.origin = originValue;
+        this.base = baseValue;
+        this.height = heightValue;
+        this.timeStamp = new Timestamp(new Date().getTime());
+        this.origin = originValue;
     }
     
     /**
      * Method to get the type of shape
      */
-	@Override
-	public String getShapeType() {
+	public String getType() {
 		return shapeType;
 	}
 
 	/**
 	 * Method to get area of triangle
 	 */
-	@Override
 	public double getArea() {
 		double number = 0.5;
 		return number * base * height;
@@ -46,7 +44,6 @@ public class Triangle implements Shape {
 	/**
 	 * method to get perimeter of triangle
 	 */
-	@Override
 	public double getPerimeter() {
 		return this.base + this.height + Math.sqrt(base * base + height * height);
 	}
@@ -54,7 +51,6 @@ public class Triangle implements Shape {
 	/**
 	 * method to check point is enclosed
 	 */
-	@Override
 	public boolean isPointEnclosed(Point point) {
 		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate))
 		    return false;
@@ -64,7 +60,6 @@ public class Triangle implements Shape {
 	/**
 	 * Method to get origin of type point
 	 */
-	@Override
 	public Point getOrigin() {
 		return origin;
 	}
@@ -72,7 +67,6 @@ public class Triangle implements Shape {
 	/**
 	 * Method to get TimeStamp
 	 */
-	@Override
 	public Timestamp getTimestamp() {
 		return this.timeStamp;
 	}

@@ -10,7 +10,7 @@ public class Polygon implements Shape {
 	double side, numberOfSides;
 	Point origin;
 	Timestamp timeStamp;
-    final String shapeType = Shape.shapeType.Polygon.toString();
+    final String shapeType = Shape.shapeType.POLYGON.toString();
     
     /**
      * Constructor to set the values of Polygon
@@ -26,15 +26,13 @@ public class Polygon implements Shape {
     /**
      * Method to get the shape type
      */
-	@Override
-	public String getShapeType() {
+	public String getType() {
 		return this.shapeType;
 	}
 	
 	/**
 	 * Method to get area of Polygon
 	 */
-	@Override
 	public double getArea() {
 		double angle = Math.toRadians(180 / numberOfSides);
 		double area = (side * side* numberOfSides) / (4 * (Math.tan(angle)));
@@ -44,7 +42,6 @@ public class Polygon implements Shape {
 	/**
 	 * Method to get perimeter of Polygon
 	 */
-	@Override
 	public double getPerimeter() {
 		return numberOfSides * side;
 	}
@@ -52,7 +49,6 @@ public class Polygon implements Shape {
 	/**
 	 * Method to check point is enclosed
 	 */
-	@Override
 	public boolean isPointEnclosed(Point point) {
 		if((origin.xAxisCoordinate < point.xAxisCoordinate) || (origin.yAxisCoordinate < point.yAxisCoordinate))
 		    return false;
@@ -62,7 +58,6 @@ public class Polygon implements Shape {
 	/**
 	 * Method to get origin coordinates
 	 */
-	@Override
 	public Point getOrigin() {
 		return new Point(origin.xAxisCoordinate, origin.yAxisCoordinate);
     }
@@ -70,7 +65,6 @@ public class Polygon implements Shape {
 	/**
 	 * Method to get the time  
 	 */
-	@Override
 	public Timestamp getTimestamp() {
 		return this.timeStamp;
 	}

@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  *
  */
 public interface Shape {
-    String getShapeType();
+    String getType();
     double getArea();
     double getPerimeter();
     boolean isPointEnclosed(Point point);
@@ -15,6 +15,6 @@ public interface Shape {
     Timestamp getTimestamp();
     
     public static enum shapeType {
-    	Square, Triangle, Circle, Rectangle, Polygon
+    	SQUARE, TRIANGLE, CIRCLE, RECTANGLE, POLYGON
     }
 }

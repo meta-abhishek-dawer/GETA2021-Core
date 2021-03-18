@@ -12,7 +12,7 @@ public class Square implements Shape {
 	double side;
 	Point origin;
 	Timestamp timeStamp;
-    final String shapeType = Shape.shapeType.Square.toString();
+    final String shapeType = Shape.shapeType.SQUARE.toString();
 	
     /**
      * Constructor setting up the values of square
@@ -28,37 +28,32 @@ public class Square implements Shape {
     /**
      * Method to get the type of shape
      */
-    @Override
-	public String getShapeType() {
-	return shapeType;
+	public String getType() {
+	    return this.shapeType;
 	}
 
     /**
      * Method to get area of Square
      */
-	@Override
 	public double getArea() {
-		return side * side;
+		return this.side * this.side;
 	}
 
 	/**
 	 * Method to get perimeter of rectangle
 	 */
-	@Override
 	public double getPerimeter() {
 		int squareSides = 4;
-		return squareSides * 4;
+		return squareSides * this.side;
 	}
 
 	/**
 	 * Method to check enclosed point
 	 */
-	@Override
 	public boolean isPointEnclosed(Point point) {
-		if(point.xAxisCoordinate < origin.xAxisCoordinate || point.yAxisCoordinate < origin.yAxisCoordinate)
-			return false;
-		if(point.xAxisCoordinate> origin.xAxisCoordinate + side || point.yAxisCoordinate> origin.yAxisCoordinate + side)
-			return false;
+		if((point.xAxisCoordinate < origin.xAxisCoordinate || point.yAxisCoordinate < origin.yAxisCoordinate) ||
+		    (point.xAxisCoordinate> origin.xAxisCoordinate + side || point.yAxisCoordinate> origin.yAxisCoordinate + side))
+			    return false;
 		else
 			return true;
 	}
@@ -66,7 +61,6 @@ public class Square implements Shape {
 	/**
 	 * Method to get origin coordinates
 	 */
-	@Override
 	public Point getOrigin() {
 		return origin;
 	}
@@ -74,7 +68,6 @@ public class Square implements Shape {
 	/**
 	 * Method to get the time
 	 */
-	@Override
 	public Timestamp getTimestamp() {
 		return this.timeStamp;
 	}

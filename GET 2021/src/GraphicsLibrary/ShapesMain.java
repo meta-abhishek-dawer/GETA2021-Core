@@ -58,7 +58,7 @@ public class ShapesMain {
 		ArrayList<Shape> shapesArea = screen.sortingByArea();
 		System.out.println("List sorted by area");
 		for(Shape list : shapesArea)
-			System.out.println(list.getShapeType() + " "+ list.getArea());
+			System.out.println(list.getType() + " "+ list.getArea());
 		
 		System.out.println();
 		screen.deleteSpecificShape("Rectangle");
