@@ -9,16 +9,16 @@ import java.util.HashMap;
  */
 public class Zones {
 	String zoneType;
-	boolean canteenPresent, parkPresent;
-	int numberOfZoneInType, numberOfCageInZone, totalCagesAllowed, numberOfAnimals;
+	boolean hasCanteenPresent, hasParkPresent;
+	int numberOfZoneInParticularType, numberOfCageInZone, totalCagesAllowed, numberOfAnimals;
 	
 	public Zones(String name, int noOfZone, int cagesInZone, int totalCages, boolean canteen, boolean park) {
 		this.zoneType = name;
-		this.numberOfZoneInType = noOfZone;
+		this.numberOfZoneInParticularType = noOfZone;
 		this.numberOfCageInZone = cagesInZone;
 		this.totalCagesAllowed = totalCages;
-		this.canteenPresent = canteen;
-		this.parkPresent = park;
+		this.hasCanteenPresent = canteen;
+		this.hasParkPresent = park;
     }
 	
 	/**
@@ -39,7 +39,7 @@ public class Zones {
 	 * @return true if have else return false
 	 */
 	public boolean hasCanteen() {
-		if(this.canteenPresent == true)
+		if(this.hasCanteenPresent)
 			return true;
 		else
 			return false;
@@ -50,7 +50,7 @@ public class Zones {
 	 * @return true if zone has park else false
 	 */
 	public boolean hasPark() {
-		if(this.parkPresent ==true)
+		if(this.hasParkPresent)
 			return true;
 		else
 			return false;
@@ -59,12 +59,12 @@ public class Zones {
 	/**
 	 * Method to add cage in particular zone
 	 */
-	public void addCageInZone() {
+	public String addCageInZone() {
 		if(this.numberOfCageInZone<this.totalCagesAllowed) {
 			this.numberOfCageInZone += 1;
-			System.out.println("Cage added..");
+			return "Cage added..";
 		}
 		else
-			System.out.println("Zone has maximum cages..");
+			return "Zone has maximum cages..";
 	}
 }

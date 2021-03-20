@@ -12,31 +12,6 @@ public class Zoo {
 	static Scanner scanner = new Scanner(System.in);
 	ArrayList<String> animalsAdded = new ArrayList<String>();
 	int spaceInCage=0;
-	public static void main(String[] args) {
-		System.out.println("Enter the name of animal");
-		String animalName = scanner.next();
-		Zoo newZoo = new Zoo();
-		
-		Animal newAnimal = newZoo.inputAnimal(animalName);
-		Zones newZone = newZoo.inputZone();
-		Cage newCage = newZoo.inputCage();
-		newZoo.addAnimal(newAnimal, newZone, newCage);
-		System.out.println(newAnimal.getSound());
-		
-		System.out.println("Zone has canteen:- " + newZone.hasCanteen());
-		System.out.println("Zone has park:- " + newZone.hasPark());
-		
-		System.out.println("Enter the name of second animal..");
-		String animalName2 = scanner.next();
-		Animal newAnimal2 = newZoo.inputAnimal(animalName2);
-		Zones newZones2 = newZoo.inputZone();
-		Cage newCage2 = newZoo.inputCage();
-		newZoo.addAnimal(newAnimal2, newZones2, newCage2);
-		System.out.println(newAnimal2.getName());
-		
-		System.out.println("Enter the zone name to increase cage like Birds, Reptile or Mammal..");
-		newZones2.addCageInZone();
-	}
 	
 	/**
 	 * Method to take input of animal
@@ -45,43 +20,38 @@ public class Zoo {
 	 */
 	public Animal inputAnimal(String name) {
 		if(name.equals("peacock")) {
-			System.out.println("Enter age, weight and sound of peacock..");
+			System.out.println("Enter age, weight of peacock..");
 			int age = scanner.nextInt();
 			int weight = scanner.nextInt();
-			String sound = scanner.next();
-			Peacock newPeacock = new Peacock(name, age, weight, sound);
+			Peacock newPeacock = new Peacock(name, age, weight);
 			return newPeacock;
 		}
 		else if(name.equals("lion")) {
-			System.out.println("Enter age, weight and sound of Lion..");
+			System.out.println("Enter age, weight of Lion..");
 			int age = scanner.nextInt();
 			int weight = scanner.nextInt();
-			String sound = scanner.next();
-			Lion newLion = new Lion(name, age, weight, sound);
+			Lion newLion = new Lion(name, age, weight);
 			return newLion;
 		}
 		else if(name.equals("crocodile")) {
-			System.out.println("Enter age, weight and sound of Crocodile..");
+			System.out.println("Enter age, weight of Crocodile..");
 			int age = scanner.nextInt();
 			int weight = scanner.nextInt();
-			String sound = scanner.next();
-			Crocodile newCrocodile = new Crocodile(name, age, weight, sound);
+			Crocodile newCrocodile = new Crocodile(name, age, weight);
 			return newCrocodile;
 		}
 		else if(name.equals("Horse")) {
-			System.out.println("Enter age, weight and sound of Horse..");
+			System.out.println("Enter age, weight of Horse..");
 			int age = scanner.nextInt();
 			int weight = scanner.nextInt();
-			String sound = scanner.next();
-			Horse newHorse = new Horse(name, age, weight, sound);
+			Horse newHorse = new Horse(name, age, weight);
 			return newHorse;
 		}
 		else if(name.equals("parrot")) {
-			System.out.println("Enter age, weight and sound of parrot..");
+			System.out.println("Enter age, weight of parrot..");
 			int age = scanner.nextInt();
 			int weight = scanner.nextInt();
-			String sound = scanner.next();
-			Parrot newParrot = new Parrot(name, age, weight, sound);
+			Parrot newParrot = new Parrot(name, age, weight);
 			return newParrot;
 		}
 		return null;
@@ -126,16 +96,16 @@ public class Zoo {
 	 */
 	public void addAnimal(Animal newAnimal, Zones newZone, Cage newCage) {
 	    if(newZone.checkAvailability(newCage) == true) {
-			if(newCage.fullCage< newCage.animalInOneCage) {
+			if(newCage.spaceInOneCage< newCage.animalInOneCage) {
 				this.animalsAdded.add(newAnimal.getName());
 				System.out.println("animal added..");
-				newCage.fullCage++;
+				newCage.spaceInOneCage++;
 			}
-			else if(newCage.fullCage == newCage.animalInOneCage){
+			else if(newCage.spaceInOneCage == newCage.animalInOneCage){
 				newZone.numberOfCageInZone -= 1;
 				System.out.println("Animal added");
 				this.animalsAdded.add(newAnimal.getName());
-				newCage.fullCage = 0;
+				newCage.spaceInOneCage = 0;
 			} 
 		}
 	    else {
@@ -158,7 +128,7 @@ public class Zoo {
 				System.out.println("Animal removed..");
 			}
 			else if(animalInCage < newCage.animalInOneCage) {
-				newCage.fullCage += animalInCage;
+				newCage.spaceInOneCage += animalInCage;
 				this.animalsAdded.remove(animalName);
 				System.out.println("Animal Removed..");
 			}

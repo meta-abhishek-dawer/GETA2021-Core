@@ -6,9 +6,10 @@ package InheritanceComposition;
  *
  */
 public class Lion extends Mammal {
+	public static String sound = "roar";
 	
-	public Lion(String lionName, int age, int weight, String sound) {
+	public Lion(String lionName, int age, int weight) {
 		super(lionName, age, weight, sound);
 	}
-
+	
 }

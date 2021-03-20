@@ -6,10 +6,10 @@ package InheritanceComposition;
  *
  */
 class Peacock extends Birds {
-    
-	public Peacock(String peacockName, int peacockAge, int peacockWeight, String peacockSound) {
-	    super(peacockName, peacockAge, peacockWeight, peacockSound);
-	}
+	public static String sound = "pehpeh";
 	
+	public Peacock(String peacockName, int peacockAge, int peacockWeight) {
+	    super(peacockName, peacockAge, peacockWeight, sound);
+	}
 	
 }

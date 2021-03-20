@@ -6,7 +6,10 @@ package InheritanceComposition;
  *
  */
 public class Parrot extends Birds {
-    public Parrot(String name, int age, int weight, String sound) {
+	public static String sound = "whistles";
+	
+    public Parrot(String name, int age, int weight) {
     	super(name, age, weight, sound);
     }
+    
 }

@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class Cage {
 	String animalName;
-	int animalInOneCage, fullCage =0;
+	int animalInOneCage, spaceInOneCage =0;
 	
 	public Cage(String name, int animalInCage) {
 		this.animalName = name;

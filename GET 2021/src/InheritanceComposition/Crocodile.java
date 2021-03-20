@@ -6,8 +6,11 @@ package InheritanceComposition;
  *
  */
 public class Crocodile extends Reptile {
+	public static String sound = "grunt";
 	
-	public Crocodile(String name, int age, int weight, String sound) {
+	//class crocodile's constructor
+	public Crocodile(String name, int age, int weight) {
 		super(name, age, weight, sound);
 	}
+	
 }	
