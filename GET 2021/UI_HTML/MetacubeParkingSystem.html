@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Metacube Parking System</title>
+</head>
+<body>
+    <!-- NavBar Section-->
+<nav class ="navbar">
+    <a href = "#employee-section">Employee</a>
+    <a href ="#vehicle-section"> Vehicle</a>
+    <a href ="#feedback-section"> Feedback</a>
+    <a href ="#pricing-section"> Pricing</a>
+</nav> 
+    <!-- Navbar ends-->
+
+    <!--Image section started-->
+<div id="image">
+    <image src="cars.jpg" width="100%" height = "500px">
+</div>
+<!-- Image section ends-->
+
+<!--Employee Section Started-->
+<div id ="employee-section" >
+    <h3 id ="heading-employee">ADD EMPLOYEE</h3>
+    <form>
+        <label class ="employee-label" for = "fname" > Full Name</label> 
+        <input type ="text" id = "fname" ><br>
+        <label class ="employee-label">Gender</label>
+        <input type ="radio" name ="gender" value="male">Male
+        <input type ="radio" name ="gender" value="female">Female
+        <input type ="radio" name ="gender" value="other">Other
+        <br>
+        <label class= "employee-label" >Email</label>
+        <input type ="email"  name ="email" ><br>
+        <label class ="employee-label"> Password</label>
+        <input type ="password" name ="password"> <br>
+        <label class ="employee-label">Confirm Password</label>
+        <input  type ="password" name ="password"> <br>
+        <label class ="employee-label"> Contact Number</label>
+        <input type ="number" name ="Contact"><br>
+        <input type ="submit" value ="submit">    
+    </form>    
+</div>
+<!-- Employee Section ends-->
+
+<!--Vehicle Section started-->
+<div id ="vehicle-section">
+    <h3 id ="heading-employee">Add Vehicle</h3>
+    <form>
+        <label class="vehicle-label">Vehicle Company</label>
+        <input type="text" name="name"><br>
+        <label class="vehicle-label"> Vehicle Model</label>
+        <input type="date" name="model"><br>
+        <label class="vehicle-label">Vehicle Type</label>
+        <input type ="text" name="type"><br>
+        <label class="vehicle-label">Vehicle Number</label>
+        <input type="number" ><br>
+        <label class="vehicle-label">Employee Id</label>
+        <input type="text" ><br>
+        <label class="vehicle-label">Identification</label>
+        <textarea  placeholder="Color, mark,visible accessory" style="height: 100px; "></textarea><br>
+        <input type ="submit" value ="submit">
+    </form>
+</div>
+<!--Vehicle section end-->
+
+<!--Feedback Section start-->
+<div id="feedback-section">
+    <h3>GET IN TOUCH</h3>
+    <form>
+        <input type="text" placeholder="Full Name"><br>
+        <input type="email" placeholder="Email"><br> 
+        <input type="text" placeholder="Subject"><br>
+        <textarea placeholder="Message" row="5" cols="30" ></textarea><br>
+        <input type="submit" value ="submit">
+    </form>
+</div>
+<!-- Feedback Section ends-->
+
+<!--Pricing Section start-->
+ <div id="pricing-section">
+    <div id="cycle-pricing">
+        <h3>CYCLE</h3>
+        <h2>$100/month</h2>
+        <h5>$5 Daily</h5>
+        <h5> $100 Monthly</h5>
+        <h5>$500 Yearly</h5>
+        <input type="submit" value="Purchased now">
+    </div>
+    <div id="MotorCycle-pricing">
+        <h3>MOTOR CYCLE</h3>
+        <h2>$200/month</h2>
+        <h5>$10 Daily</h5>
+        <h5> $200 Monthly</h5>
+        <h5>$1000 Yearly</h5>
+        <input type="submit" value="Purchased now">
+    </div>
+    <div id="Car-pricing">
+        <h3>CAR</h3>
+        <h2>$500/month</h2>
+        <h5>$20 Daily</h5>
+        <h5> $500 Monthly</h5>
+        <h5>$3500 Yearly</h5>
+        <input type="submit" value="Purchased now">
+    </div>
+</div>
+<!--Price Section ends-->
+
+</body>
+</html>
