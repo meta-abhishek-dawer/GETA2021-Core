@@ -1,7 +1,5 @@
 #Query 1:-
-create table city_details(pincode int NOT NULL, CityName varchar(20), State varchar(20));
-alter table city_details ADD PRIMARY KEY(pincode);
+CREATE table city_details(pincode INT NOT NULL, CityName VARCHAR(20), State VARCHAR(20));
+ALTER table city_details ADD PRIMARY KEY(pincode);
 
-insert into city_details values(302003, 'Jaipur', 'Rajasthan');
-
-select * from city_details where pincode = 125104 order by city_details.State, city_details.CityName;
+SELECT * FROM city_details WHERE pincode = 125104 ORDER BY city_details.State, city_details.CityName;
