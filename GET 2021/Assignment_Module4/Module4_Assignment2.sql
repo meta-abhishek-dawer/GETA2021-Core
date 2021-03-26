@@ -4,23 +4,23 @@
 DELIMITER $$
 CREATE PROCEDURE monthlyProductsSales(month int, year int)
 BEGIN
-select products.ProductName, count(products.Product_id) as MonthlySales from itemorder join products on (products.Product_id = itemorder.Product_id)
-where MONTH(itemorder.OrderDate) = month AND YEAR(itemorder.OrderDate) = year group by itemorder.Product_id;
+SELECT products.ProductName, count(products.Product_id) as MonthlySales FROM itemorder JOIN products ON (products.Product_id = itemorder.Product_id)
+WHERE MONTH(itemorder.OrderDate) = month AND YEAR(itemorder.OrderDate) = year GROUP BY itemorder.Product_id;
 END$$
 DELIMITER ;
 
 CALL monthlyProductsSales(3, 2021);
 
-select * from itemorderstatus;
+SELECT * FROM itemorderstatus;
 
 #Query2:- 
 DELIMITER $$
-CREATE PROCEDURE OrderDetailsInPeriod(startingDate DATE, endingDate DATE)
+CREATE PROCEDURE OrderDetailsInPeriod(startingDate DATE, ENDingDate DATE)
 BEGIN
-if startingDate > endingDate then
-set startingDate = endingDate - INTERVAL DAY(endingDate) DAY;
-end if;
-select itemorder.OrderId, itemorder.OrderDate, itemorder.price, itemorder.Status from itemorder where itemorder.OrderDate >= startingDate AND itemorder.OrderDate <= endingDate;
+if startingDate > ENDingDate THEN
+SET startingDate = ENDingDate - INTERVAL DAY(ENDingDate) DAY;
+END if;
+SELECT itemorder.OrderId, itemorder.OrderDate, itemorder.price, itemorder.Status FROM itemorder WHERE itemorder.OrderDate >= startingDate AND itemorder.OrderDate <= ENDingDate;
 
 END$$
 DELIMITER ;

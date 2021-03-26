@@ -1,29 +1,27 @@
 
-
 #Query1:- 
 
 DELIMITER $$
-CREATE FUNCTION OrdersInMonth(month int, year int)
-RETURNS int
+CREATE FUNCTION OrdersINMonth(month INT, year INT)
+RETURNS INT
 BEGIN
-DECLARE numberOfOrders int;
-select count(*) into numberOfOrders from itemorder where YEAR(OrderDate) in(year) AND MONTH(OrderDate) in (month);
+DECLARE numberOfOrders INT;
+SELECT count(*) INTO numberOfOrders FROM itemorder where YEAR(OrderDate) IN(year) AND MONTH(OrderDate) IN (month);
 return (numberOfOrders);
 END$$
 
-select OrdersInMonth(03, 2021);
+SELECT OrdersINMonth(03, 2021);
 
 #QUERY 2:-
 
 DELIMITER $$
-CREATE FUNCTION MaximumOrderMonthInYear(year int)
-RETURNS varchar(15)
+CREATE FUNCTION MaximumOrderMonthINYear(year INT)
+RETURNS VARCHAR(15)
 BEGIN
-DECLARE monthName varchar(15);
-SELECT MONTHNAME(OrderDate) into monthName from itemorder where YEAR(OrderDate) in (year) GROUP BY MONTH(OrderDate) order by count(*) DESC limit 1;
+DECLARE monthName VARCHAR(15);
+SELECT MONTHNAME(OrderDate) INTO monthName FROM itemorder where YEAR(OrderDate) IN (year) GROUP BY MONTH(OrderDate) order by count(*) DESC limit 1;
 return (monthName);
 END$$
  
- select MaximumOrderMonthInYear(2021);
-
-    
+ SELECT MaximumOrderMonthINYear(2021);
+ 
