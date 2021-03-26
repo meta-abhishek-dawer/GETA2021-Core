@@ -1,0 +1,139 @@
+/* Navbar CSS start*/
+.spacing-nav {
+    height: 50px;
+}
+
+.value-nav {
+    margin-top: 10px;
+}
+/* Navbar CSS ends */
+
+/* CSS of portion of blog post */
+.blog-post {
+    height:400px;
+}
+
+.blog-post-spacing {
+    height:75px;
+}
+
+.blog-post-portion {
+    height: 100%;
+    margin-left: 20px;
+}
+
+.blog-post-paragraph {
+    font-size: 20px;
+}
+
+.title-blog-post {
+    height: 100px;
+}
+
+.blog-post-continue-link {
+    height:50px;
+}
+
+/* CSS of blog posts ends */
+
+/* CSS of posts portion1 start */
+.posts {
+    height: 300px;
+    margin-top:25px;
+}
+
+.posts-portion1-part1 {
+    height: 150px;
+}
+
+.posts-portion1-part2 {
+height: 180px;
+}
+
+.paragraph-spacing {
+    margin-top: -15px;
+}
+
+.posts-paragraph {
+    margin-top:120px;
+}
+
+.posts-portion-heading6 {
+    margin-top:30px;
+}
+
+.posts-portion-paragraph {
+    margin-top: -40px;
+}
+
+/* CSS of posts portion1 ends */
+
+/* CSS of posts2 start */
+.posts-portion2 {
+    float: right;
+    margin-top: -180px;
+
+}
+
+.posts2 { 
+    height: 150px;
+}
+
+.row1 {
+    height: 50px;
+    margin-top: -170px;
+}
+
+.posts2-portion-2 {
+    float: right;
+    margin-top: -150px;
+   
+}
+
+.box2 {
+    margin-top: 23px;
+}
+
+.posts2-portion-paragraph {
+    margin-top:20px;
+}
+
+/*CSS of posts2 portion ends */
+
+/* CSS of post from author starts*/
+
+.authors-post {
+    height: 400px;
+    margin-top: 100px;
+}
+
+.sample-blog-post {
+    margin-top: 30px;
+}
+
+.sample-blog-post-author {
+    height : 50px;
+}
+
+.sample-blog-post-heading {
+    height: 70px;
+}
+
+.sample-blog-post-content {
+    height: 280px;
+}
+
+.sample-blog-post-portion2 {
+    float:right;
+    margin-top:-400px;
+}
+
+.sample-blog-post-about {
+    height: 150px;
+}
+
+.about-heading {
+    margin-left: 10px;   
+}
+
+/* CSS from author's post ends*/
