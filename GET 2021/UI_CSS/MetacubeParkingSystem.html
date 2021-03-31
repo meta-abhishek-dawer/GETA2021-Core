@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title> Metacube Parking System</title>
+    <link rel="stylesheet" href="MetacubeParkingSystem.css">
+</head>
+<body>
+    <!-- NavBar Section-->
+    <ul>
+        <li><a href="#employee-section">Employee</a></li>
+        <li><a href="#vehicle-section"> Vehicle</a></li>
+        <li><a href="#feedback-section"> Feedback</a></li>
+        <li><a href="#pricing-section"> Pricing</a></li>
+    </ul>
+    <!-- Navbar ends-->
+    <!--Image section started-->
+    <div id="image">
+        <image src="cars.jpg" width="100%" height="420px">
+    </div>
+    <!-- Image section ends-->
+    <!--Employee Section Started-->
+    <div id="employee-section">
+        <div class="collapsible-employee-button " onclick="openEmployeeForm()">
+            Employee Registration Form
+        </div>
+        <form id="employee-form">
+            <h3 id="heading-employee">ADD EMPLOYEE</h3>
+            <label class="employee-label" for="fname"> Full Name</label> <br>
+            <input type="text" class="InputField"><br><br>
+            <label class="employee-label">Gender</label><br>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other
+            <br><br>
+            <label class="employee-label">Email</label><br>
+            <input type="email" class="InputField" name="email"><br><br>
+            <label class="employee-label"> Password</label><br>
+            <input type="password" class="InputField" name="password"> <br><br>
+            <label class="employee-label">Confirm Password</label><br>
+            <input type="password" class="InputField" name="password"> <br><br>
+            <label class="employee-label"> Contact Number</label><br>
+            <input type="text" class="InputField" name="Contact"><br><br>
+            <input type="submit" id="SubmitEmployee" value="submit">
+        </form>
+    </div>
+    <!-- Employee Section ends-->
+    <!--Vehicle Section started-->
+    <div id="vehicle-section">
+        <div class="collapsible-vehicle-button" onclick="openVehicleForm()">
+            Vehicle Registration Form
+        </div>
+        <form id="Vehicle-form" onclick="öpenVehicleForm">
+            <h3 id="heading-vehicle">ADD VEHICLE</h3>
+            <label class="vehicle-label">Vehicle Company</label><br>
+            <input type="text" class="vehicle-input" name="name"><br><br>
+            <label class="vehicle-label"> Vehicle Model</label><br>
+            <input type="date" name="model"><br><br>
+            <label class="vehicle-label">Vehicle Type</label><br>
+            <input type="text" class="vehicle-input" name="type"><br><br>
+            <label class="vehicle-label">Vehicle Number</label><br>
+            <input type="number" class="vehicle-input"><br><br>
+            <label class="vehicle-label">Employee Id</label><br>
+            <input type="text" class="vehicle-input"><br><br>
+            <label class="vehicle-label">Identification</label><br>
+            <textarea placeholder="Color, mark,visible accessory" rows="5" , cols="43"
+                style="height: 80px; "></textarea><br><br>
+            <input type="submit" id="submit-vehicle" value="submit">
+        </form>
+    </div>
+    <!--Vehicle section end-->
+    <!--Feedback Section start-->
+    <div id="feedback-section">
+        <form id="feedback-form">
+            <h3 id="feedback-heading">GET IN TOUCH</h3>
+            <input type="text" class="InputFeedback" placeholder="Full Name"><br><br>
+            <input type="email" class="InputFeedback" placeholder="Email"><br> <br>
+            <input type="text" class="InputFeedback" placeholder="Subject"><br><br>
+            <textarea placeholder="Message" id="textarea-feedback" row="3" cols="45"></textarea><br><br>
+            <input type="submit" id="submit-feedback" value="Send Email ->">
+        </form>
+    </div>
+    <!-- Feedback Section ends-->
+    <!--Pricing Section start-->
+    <div id="pricing-section">
+        <h3 class="price-details">VEHICLE PRICE DETAILS</h3>
+        <div class="vehicle-options">
+            <div class="vehicle-div">
+                <h3 class="vehicle-title">CYCLE</h3>
+                <div class="parking-price">
+                    <h3>$100</h3>
+                    <h4>/month</h4>
+                </div>
+                <div class="parking-price-options">
+                    <p>$5 Daily</p>
+                    <p>$100 Monthly</p>
+                    <p>$500 Yearly</p>
+                </div>
+                <button class="purchase-button">PURCHASE NOW</button>
+            </div>
+            <div class="vehicle-div">
+                <h3 class="vehicle-title">MOTOR CYCLE</h3>
+                <div class="parking-price">
+                    <h3>$200</h3>
+                    <h4>/month</h4>
+                </div>
+                <div class="parking-price-options">
+                    <p>$10 Daily</p>
+                    <p>$200 Monthly</p>
+                    <p>$1000 Yearly</p>
+                </div>
+                <button class="purchase-button">PURCHASE NOW</button>
+            </div>
+            <div class="vehicle-div">
+                <h3 class="vehicle-title">CAR</h3>
+                <div class="parking-price">
+                    <h3>$500</h3>
+                    <h4>/month</h4>
+                </div>
+                <div class="parking-price-options">
+                    <p>$20 Daily</p>
+                    <p>$500 Monthly</p>
+                    <p>$3500 Yearly</p>
+                </div>
+                <button class="purchase-button">PURCHASE NOW</button>
+            </div>
+        </div>
+    </div>
+    <!--Price Section ends-->
+    <script type="text/javascript">
+        /* javascript function to make employee form collapsible */
+        function openEmployeeForm() {
+            var details = document.getElementById("employee-form")
+            if (details.style.display == "inline-block")
+                details.style.display = "none";
+            else
+                details.style.display = "inline-block";
+        }
+        /* javascript function to make vehicle form collapsible */
+        function openVehicleForm() {
+            var details = document.getElementById("Vehicle-form")
+            if (details.style.display == "inline-block")
+                details.style.display = "none";
+            else
+                details.style.display = "inline-block";
+        }
+    </script>
+</body>
+</html>
