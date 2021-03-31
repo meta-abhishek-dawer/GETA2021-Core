@@ -15,9 +15,10 @@ li {
     border-right: 1px solid #156ee2;
     
 }
-#InputField{
+.InputField{
     padding-right: 40%;
 }
+
 a {
     display: block;
     padding: 0 28px;
@@ -30,7 +31,6 @@ a:hover {
 }
 
 /* Navbar CSS ends  */
-
 /* Employee CSS started  */
 #employee-section {
     background-color: #ADEFD1FF;
@@ -71,7 +71,6 @@ a:hover {
 }
 
 /* Employee section ends */
-
 /* Vehicle section started  */
 #vehicle-section {
     background-color: #ADEFD1FF;
@@ -96,7 +95,7 @@ a:hover {
     color: #00203FFF; 
 }
 
-#vehicle-input {
+.vehicle-input {
     padding-right: 40%;
 }
 
@@ -116,7 +115,6 @@ a:hover {
 }
 
 /* vehicle section ends */
-
 /* Feedback section started  */
 #feedback-section {
     height: 630px;
@@ -148,7 +146,7 @@ a:hover {
     border-radius: 10px;
 }
 
-#InputFeedback {
+.InputFeedback {
     margin-left:5px;
     padding-right: 45%;
     border-radius: 10px;
@@ -160,7 +158,6 @@ a:hover {
 }
 
 /* Feedback section ends */
-
 /*  Price section statyed */
 #pricing-section {
     background-color: #ADEFD1FF;
@@ -262,5 +259,4 @@ background-color: #fff;
     border-radius : 10px;
     margin-bottom: 10px;
 }
-
 /* Price section end */
