@@ -1,9 +1,11 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
 
-const server = http.createServer((req, res) => {
-    res.end("Hi. Server is working properly.");
-});
+staticPath = path.join(__dirname, '/UI');
+console.log(staticPath);
+app.use(express.static(staticPath));
 
-server.listen(5000, () => {
-    console.log("Listening on Port 5000");
-});
+const port = 5000;
+
+app.listen(port, () => {console.log(`listeining on the port ${port}`)});
