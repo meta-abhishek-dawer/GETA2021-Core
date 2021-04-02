@@ -25,6 +25,7 @@
             Employee Registration Form
         </div>
         <form id="employee-form">
+            <span id="span-employee"></span>
             <h3 id="heading-employee">ADD EMPLOYEE</h3>
             <label class="employee-label" id="employee-label-name" for="fname"> Full Name</label> <br>
             <input type="text" class="InputField" id="nameEmployee" onchange="return employeeNameValidation()">
@@ -80,7 +81,7 @@
             <textarea placeholder="Color, mark,visible accessory" id="vehicleTextarea"
                 onchange="validateVehicleTextarea()" rows="5" , cols="43" style="height: 80px; "></textarea>
             <span id="vehicleTextareaSpan"></span><br><br>
-            <input type="submit" id="submit-vehicle" ondblclick="openPricingSection()" value="submit">
+            <input type="submit" id="submit-vehicle" onclick="openPricingSection()" value="submit">
         </form>
     </div>
     <!--Vehicle section end-->
