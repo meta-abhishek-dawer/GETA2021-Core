@@ -1,0 +1,697 @@
+ /* Body CSS start*/
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body CSS Ends*/
+
+/*Header CSS starts*/
+header {
+    display: flex;
+    flex :1 ;
+}
+.header-background-image {
+height: 600px;
+width: 100%;
+position: absolute;
+z-index: -1;
+}
+
+.header-ul {
+    height: 90%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 500px;
+    width:100%;
+    line-height: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    position: absolute;
+    z-index: 28;
+
+   
+}
+
+li {
+    color: #fff;
+    float:left;
+}
+
+.logo-title {
+    margin-left: 100px;
+}
+
+.nav1 {
+    margin-left: 450px;
+}
+
+.nav-link {
+    padding-left:20px;
+    color:#fff;
+    text-decoration: none;
+}
+
+.facebook-button {
+    margin-left:350px;
+    margin-top:10px;
+    height:15px;
+    width:15px;
+    color:white;
+}
+
+.instagram-button {
+    padding-left:5px;
+    color:white;
+    height: 15px;
+    width: 15px;
+}
+
+.googleplus-button {
+    height: 15px;
+    width: 15px;
+    padding-left: 5px;
+    color: white;
+}
+
+.display-phone1 {
+    height:600px;
+}
+
+.phone1-image {
+    height: 350px;
+    margin-left: 800px;
+    margin-top:150px;
+    position: absolute;
+    z-index: 100;
+}
+
+.header-paragraph {
+    color:white;
+    position: absolute;
+    z-index: 100;
+    font-size: 40px;
+    margin-left: 200px;
+    margin-top: 200px;
+    
+}
+
+.download-button {
+    z-index :100;
+    height:40px;
+    width: 80px;
+    color: #fff;
+    font-size: 10px;
+    background-color: orangered;
+    margin-left:200px;
+    position: absolute;
+    margin-top:320px;
+    border: 0px;
+}
+
+.features-button {
+    z-index: 100;
+    position : absolute;
+    margin-top:320px;
+    height: 40px;
+    width: 80px;
+    margin-left: 300px;
+    background-color: blue;
+    color:#fff;
+    font-size: 10px;
+    border: 0px;
+}
+
+/*Header CSS ends*/
+
+/*Perfect features CSS start*/
+.features {
+    display:flex;
+    flex-direction : column;
+}
+
+.perfect-features {
+    height:200px;
+    text-align: center;
+}
+
+.perfect-features-heading {
+    font-family: 'Roboto', sans-serif;
+    color :#7070C4;
+}
+
+.perfect-features-paragraph {
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+
+.features-types {
+    height:200px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.feature1 {
+    height: 100%;
+    width: 30%;
+}
+
+.feature2 {
+    height: 100%;
+    width: 30%;
+}
+
+.feature3 {
+    height: 100%;
+    width: 30%;
+}
+
+.diamond-shape {
+    color: red;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.feature-heading {
+    margin-left: 140px;
+    margin-top : -60px;
+}
+
+.feature-paragraph {
+    color: grey;
+    margin-top : -20px;
+    margin-left: 140px;
+}
+
+.feature2-shape {
+    color:red;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.feature3-shape {
+    color:red;
+    margin-left: 50px;
+    margin-top : 20px;
+}
+
+/*Features CSS ends*/
+
+/*Cities Weather CSS start*/
+.cities-weather {
+    justify-content: center;
+    width: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cities-weather :nth-child(2) {
+    z-index: 2;
+}
+
+.cities-weather :last-child { 
+    margin-top: 60px;
+    margin-left: -100px;
+
+}
+.cities-weather :first-child {
+    margin-top: 60px;
+    margin-right: -100px;
+}
+
+.cities-weather-image1 {
+    margin-left: 10px;
+}
+
+.cities-weather-image2 {
+    z-index :1;
+}
+
+.cities-weather :last-child{
+    transform: skewY(0deg);
+}
+
+/*CSS Cities Weather ends*/
+
+/*Screenshots CSS start*/
+.screens {
+    display: flex;
+    flex : 1;
+    flex-direction: column;
+}
+
+.screenshots {
+    height: 100px;
+    width: 100%;
+    margin-top:40px;
+    text-align: center;
+    color: #7070C4;
+}
+
+.screenshots-paragraph {
+    margin-top : -15px;
+    color : grey;
+}
+
+.screen1 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 400px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.screen1-portion1 {
+    height:100%;
+    width : 40%;
+}
+
+.screen1-image {
+    float:right;
+    margin-right: 50px;
+}
+
+.screen1-portion2 {
+    height: 100%;
+    width : 40%;
+}
+
+.screen1-cloud {
+    margin-top:50px;    
+    margin-left: 30px;
+}
+
+.screen1-heading {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.screen1-paragraph {
+    margin-left:30px;
+    margin-top: -10px;
+}
+
+.screen1-circle {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:1px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 30px;
+    text-align:center;
+}
+
+.screen1-circle2 {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:0px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 78px;
+    margin-top: -58px;
+    text-align:center;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.screen1-circle3 {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:0px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 125px;
+    margin-top: -58px;
+    text-align:center;
+    position: absolute;
+    z-index: -100;
+}
+
+.screen2 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 400px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.screen2-portion1 {
+    height: 100%;
+    width:40%;
+}
+
+.screen2-portion2 {
+    height: 100%;
+    width: 40%;
+}
+
+.screen2-sun {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.screen2-image {
+    margin-left: 60px;
+}
+
+.screen2-heading {
+    margin-left: 100px;
+}
+
+.screen2-paragraph {
+    margin-left: 100px;
+    margin-top : -20px;
+    color: grey;
+}
+
+.screen2-circle {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:1px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 98px;
+    text-align:center;
+}
+
+.screen2-circle2 {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:0px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 145px;
+    margin-top: -58px;
+    text-align:center;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.screen2-circle3 {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:0px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 195px;
+    margin-top: -58px;
+    text-align:center;
+    position: absolute;
+    z-index: -100;
+}
+
+.screen3 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 400px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.screen3-circle {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:1px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 98px;
+    text-align:center;
+}
+
+.screen3-circle2 {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:0px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 145px;
+    margin-top: -58px;
+    text-align:center;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.screen3-circle3 {
+    height:50px;
+    width: 50px;
+    opacity: 0.3;
+    border-left:0px;
+    border-right:1px solid black;
+    border-style: dotted;
+    border-radius: 50%;
+    margin-left: 195px;
+    margin-top: -58px;
+    text-align:center;
+    position: absolute;
+    z-index: -100;
+}
+
+.screen3-portion1 {
+    height: 100%;
+    width:40%;
+}
+
+.screen3-portion2 {
+    height: 100%;
+    width: 40%;
+}
+
+.screen3-image {
+    float: right;
+    margin-right: 50px;
+}
+
+.screen3-cloud {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.screen3-heading {
+    margin-left: 50px;
+}
+
+.screen3-paragraph {
+    margin-left: 50px;
+    color: grey;
+    margin-top: -20px;
+}
+
+/* Screenshots CSS ends*/
+
+/*Reviews CSS start*/
+
+.reviews {
+    margin-top:80px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.review-heading {
+    height: 100px;
+    width:100%;
+}
+
+.review-heading-heading2 {
+    text-align: center;
+    color:#7070C4;
+
+}
+
+.review-heading-paragraph {
+    text-align: center;
+    color: grey;   
+}
+
+.reviewers {
+    height:400px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.reviewers-portion1 {
+    width: 40%;
+}
+
+.reviewers-portion2 {
+    width: 40%;
+    
+}
+
+.reviewers-portion1-paragraph1 {
+    font-size: 60px;
+    color: blue;
+}
+
+.reviewers-portion1-heading3 {
+    font-size: 15px;
+    margin-top: -80px;
+}
+
+.reviewers-portion1-heading5 {
+    margin-top: -10px;
+}
+
+.reviewers-portion1-paragraph2 {
+    font-size: 60px;
+    color: blue;
+    float: right;
+    margin-right:270px;
+    margin-top: -40px;
+}
+
+.reviewers-portion1-paragraph3 {
+    font-size: 60px;
+    color: blue;
+}
+
+.reviewers-portion2-paragraph2 {
+    font-size: 60px;
+    color: blue;
+    float: right;
+    margin-right:250px;
+    margin-top: -40px;
+}
+
+/*Reviews of CSS ends*/
+
+/*App Download CSS starts*/
+.download-app {
+    height: 350px;
+    width: 100%;
+    display :flex;
+    flex: 1;
+    justify-content: center;
+    background-color: #4D79FF;
+}
+
+
+.download-app-portion1 {
+    width: 40%;
+    height:100%;
+}
+
+.download-portion1-heading {
+    color:white;
+    margin-left: 30px;
+    margin-top:40px;
+}
+
+.download-portion1-paragraph {
+    margin-left:30px;
+    color:white;
+    font-size: 17px;
+}
+
+.download-appstore {
+    margin-left:30px;
+}
+
+.download-app-portion2 {
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+    margin-top: 180px;
+}
+
+
+
+/*App Download CSS ends*/
+
+/*Footer section CSS starts*/
+footer {
+    position: absolute;
+    z-index: 100;
+    height:200px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #444548;
+    width: 100%;
+}
+
+.footer-section1 {
+    height:100px;
+}
+.footer-section2-heading {
+    color:white;
+    text-align: center;
+}
+
+.footer-ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.footer-nav {
+    margin-left:480px;
+    margin-top :-30px;
+}
+
+.footer-nav-link {
+    color:white;
+    padding:10px;
+    text-decoration: none;
+}
+.footer-logoimage {
+    height:40px;
+    width:100px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.footer-facebook-button {
+    margin-left:350px;
+    margin-top:-10px;
+    height:15px;
+    width:15px;
+    color:white;
+}
+
+.footer-instagram-button {
+    padding-left:5px;
+    margin-top: -10px;
+    color:white;
+    height: 15px;
+    width: 15px;
+}
+
+.footer-googleplus-button {
+    height: 15px;
+    margin-top: -10px;
+    width: 15px;
+    padding-left: 5px;
+    color: white;
+}
+
+/*Footer section CSS ends*/
