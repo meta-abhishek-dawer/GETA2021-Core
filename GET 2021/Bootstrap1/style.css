@@ -1,0 +1,178 @@
+/* Navbar CSS start*/
+.spacing-nav {
+    height: 50px;
+}
+.border-bottom {
+    width:98%;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.value-nav {
+    margin-top: 10px;
+}
+/* Navbar CSS ends */
+
+/* CSS of portion of blog post */
+.blog-post {
+    height:400px;
+    margin-right: 20px;
+}
+
+.blog-post-spacing {
+    height:75px;
+}
+
+.blog-post-portion {
+    height: 100%;
+    margin-left: 20px;
+}
+
+.blog-post-paragraph {
+    font-size: 20px;
+}
+
+.title-blog-post {
+    height: 100px;
+}
+
+.blog-post-continue-link {
+    height:50px;
+}
+
+/* CSS of blog posts ends */
+
+/* CSS of posts portion1 start */
+.posts {
+    height: 300px;
+    margin-top:25px;
+}
+
+.posts-portion1 {
+
+}
+
+
+.posts-portion2 {
+    float:right;
+    margin-top:-298px;
+    
+}
+.posts-portion1-part1 {
+    height: 250px;
+    margin-top: 25px
+}
+
+
+.posts-portion1-part2 {
+    height: 297px;
+margin-left: -50px;
+margin-top: 25px;
+
+}
+.posts-portion2-part2 {
+    height: 298px;
+    margin-left: -20px;
+}
+
+.paragraph-spacing {
+    margin-top: -15px;
+}
+
+.posts-paragraph {
+    margin-top:120px;
+}
+
+.posts-portion-heading6 {
+    margin-top:30px;
+}
+
+.posts-portion-paragraph {
+    margin-top: -40px;
+}
+
+/* CSS of posts portion1 ends */
+
+/* CSS of post from author starts*/
+
+.authors-post {
+    height: 2130px;
+    margin-top: 100px;
+}
+
+.sample-blog-post {
+    margin-top: 30px;
+}
+
+.sample-blog-post-author {
+    height : 50px;
+}
+
+.sample-blog-post-heading {
+    height: 70px;
+}
+
+.sample-blog-post-heading2 {
+    height: 120px;
+}
+
+.sample-blog-post-subheading {
+    height:180px;
+}
+
+.sample-blog-post-subheading2 {
+    height:430px;
+}
+
+.sample-blog-post-content {
+    height: 300px;
+}
+
+.sample-blog-post-portion2 {
+    float:right;
+    margin-top:-2020px;
+}
+
+.sample-blog-post-about {
+    height: 150px;
+}
+
+.another-blog-post {
+    height:100px;
+}
+
+.another-blog-post-content {
+    height:360px;
+}
+
+.new-feature {
+    height: 400px;
+}
+
+.my-button {
+    border-radius: 20px;
+}
+
+.elsewhere {
+    height: 130px;
+}
+.about-heading {
+    margin-left: 10px;   
+}
+
+/* CSS from author's post ends*/
+
+/*Footer area starts*/
+.footer {
+    height:150px;
+}
+
+.footer-heading {
+    text-align: center;
+}
+
+.footer-paragraph {
+    text-align: center;
+}
+/*Footer area ends*/
