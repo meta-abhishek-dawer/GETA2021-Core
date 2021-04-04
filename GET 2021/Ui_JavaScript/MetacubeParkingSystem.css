@@ -1,0 +1,201 @@
+
+body {
+    text-align: center;
+}
+
+/* Navbar CSS  */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 36px;
+    line-height: 36px;
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+li {
+    float:left;
+    border-right: 1px solid #156ee2;
+    
+}
+
+a {
+    display: block;
+    padding: 0 28px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #156ee2;
+}
+
+/* Navbar CSS ends  */
+
+/* Employee CSS started  */
+
+#nameerror {
+    color:red;
+}
+
+#emailerror {
+    color:red;
+}
+
+#generror {
+    color: red;
+}
+
+#passerror {
+    color: red;
+}
+
+#cpasserror {
+    color:red;
+}
+
+#contacterror {
+    color: red;
+}
+
+#employee-section {
+    background-color: #ADEFD1FF;
+    height: 500px;
+}
+#employee-form {
+    display: none;
+    padding:60px;
+    margin-left: 470px;
+    background-color: rgba(255, 0, 0, 0.1); 
+    width:300px;
+    
+}
+
+#heading-employee {
+    text-align: center;
+    background-color: transparent;
+    color: #00203FFF;
+}
+
+.genmessage {
+    margin-top : 10px;
+}
+
+.emailerror .emailmessage {
+    margin: 40px;
+}
+
+.passerror .passmessage {
+    margin-top: 50px;
+}
+
+.cpasserror .cpassmessage {
+    margin-top: 60px ;
+}
+.contacterror .contactmessage {
+    margin-top: 70px;
+}
+
+.collapsible-employee-button {
+    height:25px;
+    background-color: transparent;
+    color:#000;
+    font-size:20px;
+    text-align: center;
+    border : 1px solid black;
+}
+
+/* Employee section ends */
+
+/* Vehicle section started  */
+#companyerror {
+    color: red;
+}
+#modelerror {
+    color: red;
+}
+#vehicletypeerror {
+    color: red;
+}
+#numbererror {
+    color: red;
+}
+#empiderror {
+    color: red;
+}
+#identificationerror {
+    color: red;
+}
+
+#vehicle-section {
+    background-color: #ADEFD1FF;
+    margin: -10px 0px;
+    height: 650px;
+}
+#Vehicle-Form {
+    padding: 30px;
+    margin-left: 470px;
+    background-color: rgba(255, 0, 0, 0.1);
+    width:360px;
+}
+
+#heading-vehicle {
+    text-align: center;
+    background-color: transparent;
+    color: #00203FFF;
+}
+
+.collapsible-vehicle-button {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    border : 1px solid black;
+    background-color: transparent;
+}
+
+/* vehicle section ends */
+
+/*  Price section statyed */
+#selectCuurrencyerror {
+    color: red;
+}
+#selectPasserror {
+    color: red;
+}
+#passCosterror {
+    color: red;
+}
+
+#pricing-section {
+    background-color: #ADEFD1FF;
+    width:100%;
+    height:620px;
+    margin-top: -20px;
+    text-align: center;
+}
+
+#pricing-form {
+    padding: 30px;
+    margin-left: 470px;
+    background-color:rgba(255, 0, 0, 0.1);
+    width: 360px;
+    margin-top:-20px;
+    text-align: center;
+}
+
+.price-details {
+    border:3px solid #00203FFF;
+    background-color: transparent;
+}
+
+
+
+
+.price-details {
+    border: 3px solid #00203FFF;
+    background-color: transparent;
+}
+
+/* Price section end */
