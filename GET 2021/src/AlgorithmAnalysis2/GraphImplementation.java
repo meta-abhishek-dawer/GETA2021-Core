@@ -11,13 +11,19 @@ import java.util.Stack;
 
 import javax.sound.sampled.ReverbType;
 
-public class GraphImplementation {
+/*
+ * Graph implementation class implementing interface graph and defining its methods
+ */
+public class GraphImplementation implements Graph {
 
 	public int numberOfVertices;
 	public Vertex[] vertices;
 	public LinkedList<Edge> edgeList;
 	public Edge edge;
 	
+	/*
+	 * Constructor of graph implementation class
+	 */
 	public GraphImplementation(int noOfVertices) {
 		this.numberOfVertices = noOfVertices;
 		vertices = new Vertex[numberOfVertices];
@@ -27,30 +33,53 @@ public class GraphImplementation {
 		}
 	}
 	
+	/*
+	 * Method to add edge in list
+	 * @param start value of starting vertices
+	 * @param end value of ending vertices
+	 * @param value weight of node
+	 */
 	public void addEdge(int start, int end, int value) {
 		edgeList.add(new Edge(start, end, value));
 		vertices[start].addNeighbour(end, value);
 		vertices[end].addNeighbour(start, end);
 	}
 	
+	/*
+	 * Method to get list of edges
+	 */
 	public LinkedList<Edge> getEdgeList() {
 		return edgeList;
 	}
 	
+	/*
+	 * Method to set number of vertices
+	 */
 	public void numberOfVertices(int numberOfVertices) {
 		this.numberOfVertices = numberOfVertices;
 	}
 	
+	/*
+	 * Method to get number of vertices
+	 */
 	public int getNumberOfVertices() {
 		return this.numberOfVertices;
 	}
 	
+	/*
+	 * Method to check graph is connected
+	 * return true if all edges connected else false
+	 */
 	public boolean isConnected() {
 		if(this.numberOfVertices <= 0)
 			return false;
 		return this.DFS(0).size() == this.getNumberOfVertices();
 	}
 	
+	/*
+	 * Method to check graph connected using DFS
+	 * @param start where value is started 
+	 */
 	public HashSet<Integer> DFS(int start) {
 		HashSet<Integer> visited = new HashSet<>();
 		Stack<Integer> stack = new Stack<>();
@@ -67,6 +96,9 @@ public class GraphImplementation {
 		return visited;
 	}
 	
+	/*
+	 * Method to get graph is reachable or not
+	 */
 	public Integer[] reachable(int vertices) {
 		HashSet<Integer> visited = this.DFS(vertices);
 		Integer[] result = visited.toArray(new Integer[0]);
@@ -74,6 +106,10 @@ public class GraphImplementation {
 		return result;
 	}
 	
+	/*
+	 * method to get mst
+	 * return list of type ArrayList
+	 */
 	public ArrayList<Edge> mst() {
 		ArrayList<Edge> mstResult = new ArrayList<>();
 		Collections.sort(this.edgeList, Edge.weightedSort);
@@ -90,6 +126,9 @@ public class GraphImplementation {
 		return mstResult;
 	}
 	
+	/*
+	 * Method to check cycle or not
+	 */
 	public boolean isCycle(HashMap<Integer, Integer> previousVertices, int start, int end) {
 		int previous1 = previous(previousVertices, start);
 		int previous2 = previous(previousVertices, end);
@@ -105,11 +144,20 @@ public class GraphImplementation {
 		return vertex;
 	}
 	
+	/*
+	 * method to get shortest path
+	 * @param start containing position of starting index
+	 * @param end containing position of ending index
+	 */
 	public int shortestPath(int start, int end) {
 		int[] distance = this.dijkastra(start);
 		return distance[end];
 	}
 	
+	/*
+	 * Method to find shortest find using dijkastra
+	 * @start containing starting position of index
+	 */
 	public int[] dijkastra(int start) {
 		int[] result = new int[this.getNumberOfVertices()];
 		for(int i= 0; i< this.getNumberOfVertices(); i++)

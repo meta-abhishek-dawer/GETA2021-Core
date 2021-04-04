@@ -2,6 +2,9 @@ package AlgorithmAnalysis2;
 
 import java.util.ArrayList;
 
+/*
+ * Interface graph in which we declaring different methods
+ */
 public interface Graph {
 	
 	boolean isConnected();
