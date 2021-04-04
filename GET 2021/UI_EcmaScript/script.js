@@ -1,3 +1,11 @@
+let hide = (id) => {
+    document.getElementById(id).style = "display: none";
+};
+
+let display = (id) => {
+    document.getElementById(id).style = "display: block";
+};
+
 hide("gen");
 hide("email");
 hide("password");
@@ -13,28 +21,20 @@ hide("pricing-form");
 hide("empid");
 hide("submitfinal");
 hide("selectCurrancy");
-//hide("selectPass");
 
 var employeeName;
 var employeePassword;
 var vehicle;
 var id;
-var currency;
 
-function hide(id) {
-    document.getElementById(id).style = "display: none";
-}
 
-function display(id) {
-    document.getElementById(id).style = "display: block";
-}
 
-function openEmployeeForm() {
+let openEmployeeForm = () => {
     document.getElementById("employee-form").style.display = "block";
 }
 
-function validateName(name) {
-    var key = this.event.keyCode;
+let validateName = (name) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (name.value.length > 0) {
             if (name.value.length >= 2 && isNaN(name.value)) {
@@ -55,15 +55,15 @@ function validateName(name) {
     }
 }
 
-function validateGender(value) {
+let validateGender = (value) => {
     document.getElementById("emailmessage").innerHTML = "Hi. " + this.employeeName + ". Please enter your mail.";
     hide("gen");
     hide("genmessage");
     display("email");
 }
 
-function validateEmail(email) {
-    var key = this.event.keyCode;
+let validateEmail = (email) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (email.value.length > 0) {
             if (email.value.search(/[a-zA-Z0-9]+[@]+[a-zA-Z]+[.]+[a-zA-Z]/) != -1) {
@@ -84,8 +84,8 @@ function validateEmail(email) {
     }
 }
 
-function validatePassword(password) {
-    var key = this.event.keyCode;
+let validatePassword = (password) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (password.value.length > 0) {
             if (password.value.search(/[0-9]+/) != -1 && password.value.search(/[!@#$%^^&*(){}?><]+/) != -1 && password.value.search(/[A-Z]+/) != -1 && password.value.length >= 8) {
@@ -107,8 +107,8 @@ function validatePassword(password) {
     }
 }
 
-function validateConfirmPassword(confirmPassword) {
-    var key = this.event.keyCode;
+let validateConfirmPassword = (confirmPassword) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (confirmPassword.value.length > 0) {
             if (employeePassword == confirmPassword.value) {
@@ -129,8 +129,8 @@ function validateConfirmPassword(confirmPassword) {
     }
 }
 
-function validateContactNumber(contactNumber) {
-    var key = this.event.keyCode;
+let validateContactNumber = (contactNumber) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (contactNumber.value.length > 0) {
             if (!isNaN(contactNumber.value) && contactNumber.value > 8) {
@@ -157,8 +157,8 @@ document.getElementById("submitEmployee").addEventListener("click", function (ev
     event.preventDefault();
 });
 
-function validateCompanyName(companyName) {
-    var key = this.event.keyCode;
+let validateCompanyName = (companyName) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (companyName.value.length > 0) {
             if (companyName.value.length >= 2 && isNaN(companyName.value)) {
@@ -179,8 +179,8 @@ function validateCompanyName(companyName) {
     }
 }
 
-function validateVehicleModel(vehicleModel) {
-    var key = this.event.keyCode;
+let validateVehicleModel = (vehicleModel) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (vehicleModel.value.length > 0) {
             if (vehicleModel.value.length == 4 && !isNaN(vehicleModel.value)) {
@@ -201,8 +201,8 @@ function validateVehicleModel(vehicleModel) {
     }
 }
 
-function validateVehicleType(vehicleType) {
-    var key = this.event.keyCode;
+let validateVehicleType = (vehicleType) => {
+    let key = this.event.keyCode;
     document.getElementById("vehicletypeerror").innerHTML = " ";
     vehicleType.style = "display: none";
     display("number");
@@ -211,8 +211,8 @@ function validateVehicleType(vehicleType) {
     document.getElementById("numbermessage").innerHTML = "Hi " + this.employeeName + ", enter your vehicle number";
 }
 
-function validateVehicleNumber(vehicleNumber) {
-    var key = this.event.keyCode;
+let validateVehicleNumber = (vehicleNumber) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (vehicleNumber.value.length > 0) {
             if (!isNaN(vehicleNumber.value) && vehicleNumber.value > 2) {
@@ -233,8 +233,8 @@ function validateVehicleNumber(vehicleNumber) {
     }
 }
 
-function validateEmployeeId(id) {
-    var key = this.event.keyCode;
+let validateEmployeeId = (id) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (id.value.length > 0) {
             if (!isNaN(id.value) && vehicleNumber.value > 0) {
@@ -255,9 +255,8 @@ function validateEmployeeId(id) {
     }
 }
 
-function validateVehicleIdentification(identification) {
-    //hide("selectPass");
-    var key = this.event.keyCode;
+let validateVehicleIdentification = (identification) => {
+    let key = this.event.keyCode;
     if (key == 13) {
         if (identification.value.length > 0) {
             if (identification.value.length > 4) {
@@ -280,7 +279,7 @@ function validateVehicleIdentification(identification) {
     }
 }
 
-function selectCurrencyType(currencyType) {
+let selectCurrencyType = (currencyType) => {
     hide("selectPass");
     currency = document.getElementById("currency").value;
     document.getElementById("selectPassmessage").innerHTML = "Hi " + this.employeeName + " Please select your plan.";
@@ -289,8 +288,8 @@ function selectCurrencyType(currencyType) {
     display("selectPass");
 }
 
-function selectPassType(passType) {
-    var selected = passType.selectedIndex;
+let selectPassType = (passType) => {
+    let selected = passType.selectedIndex;
     if (selected == 1) {
         if (currency == "USD") {
             if (vehicle == "Cycle") {
@@ -370,14 +369,15 @@ function selectPassType(passType) {
             }
         }
     }
-    var bill = document.getElementById("passCost").value;
+    let bill = document.getElementById("passCost").value;
     document.getElementById("passCostmessage").innerHTML = "Hi " + this.employeeName + ", Bill is " + bill.value;
     hide("selectPass");
     hide("selectPassmessage");
     display("submitfinal");
 }
 
-function final() {
+
+let final = () => {
     alert('Thanks for the registration..');
     hide("passCostmessage");
     hide("submitfinal")

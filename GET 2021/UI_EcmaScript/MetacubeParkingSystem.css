@@ -65,7 +65,7 @@ a:hover {
     height: 500px;
 }
 #employee-form {
-    display: none;
+    /*display: none; */
     padding:60px;
     margin-left: 470px;
     background-color: rgba(255, 0, 0, 0.1); 
