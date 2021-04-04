@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title> Metacube Parking System</title>
+    <link rel="stylesheet" href="MetacubeParkingSystem.css">
+</head>
+
+<body>
+    <!-- NavBar Section-->
+    <ul>
+        <li><a href="#employee-section">Employee</a></li>
+        <li><a href="#vehicle-section"> Vehicle</a></li>
+        <li><a href="#feedback-section"> Feedback</a></li>
+        <li><a href="#pricing-section"> Pricing</a></li>
+    </ul>
+    <!-- Navbar ends-->
+    <!--Image section started-->
+    <div id="image">
+        <image src="cars.jpg" width="100%" height="420px">
+    </div>
+    <!-- Image section ends-->
+    <!--Employee Section Started-->
+    <div id="employee-section">
+        <div class="collapsible-employee-button " onclick="openEmployeeForm()">
+            Employee Registration Form
+        </div>
+        <form id="employee-form">
+            <span id="span-employee"></span>
+            <h3 id="heading-employee">ADD EMPLOYEE</h3>
+            <div id="message" class="message"></div>
+            <div id="nameerror" class="nameerror"></div>
+            <div id="name">
+                <input type="text" id="employeeName" placeholder="Enter your name" onkeydown="validateName(this)" />
+            </div><br>
+            <div id="genmessage" class="genmessage"></div>
+            <div class="generror" class="generror"></div>
+            <div id="gen">
+                <input type="radio" name="gender" id="gender" onclick="validateGender(this)" />Male
+                <input type="radio" name="gender" id="gender" onclick="validateGender(this)" />Female
+            </div><br>
+            <div id="emailmessage" class="emailmessage"></div>
+            <div id="emailerror" class="emailerror"></div>
+            <div id="email">
+                <input type="email" id="employeeEmail" onkeydown="validateEmail(this)" placeholder="Enter your email" />
+            </div><br>
+            <div id="passmessage" class="passmessage"></div>
+            <div id="passerror" class="passerror"></div>
+            <div id="password">
+                <input type="password" id="employeePassword" onkeydown="validatePassword(this)" />
+            </div><br>
+            <div id="cpassmessage" class="cpassmessage"></div>
+            <div id="cpasserror" class="cpasserror"></div>
+            <div id="confirmPassword">
+                <input type="password" id="employeeConfirmPassword" placeholder="Re-enter your password"
+                    onkeydown="validateConfirmPassword(this)" />
+            </div><br>
+            <div id="contactmessage" class="contactmessage"></div>
+            <div id="contacterror" class="contacterror"></div>
+            <div id="contact">
+                <input type="text" id="employeeContact" placeholder="Enter your number"
+                    onkeydown="validateContactNumber(this)" />
+            </div><br>
+        </form>
+    </div>
+    <!-- Employee Section ends-->
+    <!--Vehicle Section started-->
+    <div id="vehicle-section">
+        <div class="collapsible-vehicle-button">
+            Vehicle Registration Form
+        </div>
+        <form id="Vehicle-Form">
+            <h3 id="heading-vehicle">ADD VEHICLE</h3>
+            <div id="companymessage" class="companymessage"></div>
+            <div id="companyerror" class="companyerror"></div>
+            <div id="company">
+                <input type="text" id="vehicleCompanyName" placeholder="Enter company name"
+                    onkeydown="validateCompanyName(this)" />
+            </div><br><br>
+            <div id="modelmessage" class="modelmessage"></div>
+            <div id="modelerror" class="modelerror"></div>
+            <div id="model">
+                <input type="text" id="vehicleModel" placeholder="Enter vehicle Model"
+                    onkeydown="validateVehicleModel(this)" />
+            </div><br><br>
+            <div id="vehicletypemessage" class="vehicletypemessage"></div>
+            <div id="vehicletypeerror" class="vehicletypeerror"></div>
+            <div id="type">
+                <select id="vehicleType" onchange="validateVehicleType(this)">
+                    <option selected>Select Vehicle</option>
+                    <option>Cycle</option>
+                    <option>Motor Cycle</option>
+                    <option> Car</option>
+                </select>
+            </div><br><br>
+            <div id="numbermessage" class="numbermessage"></div>
+            <div id="numbererror" class="numbererror"></div>
+            <div id="number">
+                <input type="text" id="vehicleNumber" placeholder="Enter vehicle number"
+                    onkeydown="validateVehicleNumber(this)" />
+            </div><br>
+            <div id="empidmessage" class="empidmessage"></div>
+            <div id="empiderror" class="empiderror"></div>
+            <div id="empid">
+                <input type="text" id="EmployeeId" placeholder="Enter your Employee Id"
+                    onkeydown="validateEmployeeId(this)" />
+            </div><br>
+            <div id="identificationmessage" class="identificationmessage"></div>
+            <div id="identificationerror" class="identificationerror"></div>
+            <div id="identification">
+                <textarea id="vehicleIdentification" placeholder="Enter something abour vehicle"
+                    onkeydown="validateVehicleIdentification(this)" /></textarea>
+            </div>
+        </form>
+    </div>
+    <!--Vehicle section end-->
+    <!--Pricing Section start-->
+    <div id="pricing-section">
+        <h3 class="price-details">VEHICLE PRICE DETAILS</h3>
+
+        <form id="pricing-form">
+            <div id="selectCurrencymessage" class="selectCurrencymessage"></div>
+            <div id="selectCurrencyerror" class="selectCurrencyerror"></div>
+            <div id="selectCurrency">
+                <select id="currency" onchange="selectCurrencyType(this)">
+                    <option selected> Choose currency</option>
+                    <option>INR</option>
+                    <option>USD</option>
+                    <option>YEN</option>
+                </select>
+            </div><br><br>
+            <div id="selectPassmessage" class="selectPassmessage"></div>
+            <div id="selectPasserror" class="selectPasserror"></div>
+            <div id="selectPass">
+                <select onchange="selectPassType(this)" id="passType">
+                    <option selected>Choose plan</option>
+                    <option>Daily</option>
+                    <option>Monthly</option>
+                    <option>Yearly</option>
+                </select>
+            </div><br><br>
+            <div id="passCostmessage" class="passCostmessage"></div>
+            <div id="passCosterror" class="passCosterror"></div>
+            <div id="passCost"></div>
+            <div id="submitfinal">
+                <button onclick="final()">Purchase</button>
+            </div>
+        </form>
+        <!--Price Section ends-->
+        <!--Adding javascript file using script tag-->
+        <script src="script.js">
+        </script>
+</body>
+
+</html>
