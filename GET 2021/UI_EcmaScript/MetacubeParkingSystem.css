@@ -65,7 +65,7 @@ a:hover {
     height: 500px;
 }
 #employee-form {
-    /*display: none; */
+    display: none; 
     padding:60px;
     margin-left: 470px;
     background-color: rgba(255, 0, 0, 0.1); 
@@ -157,7 +157,7 @@ a:hover {
 
 /* vehicle section ends */
 
-/*  Price section statyed */
+/*  Price section started */
 #selectCuurrencyerror {
     color: red;
 }
@@ -187,14 +187,6 @@ a:hover {
 
 .price-details {
     border:3px solid #00203FFF;
-    background-color: transparent;
-}
-
-
-
-
-.price-details {
-    border: 3px solid #00203FFF;
     background-color: transparent;
 }
 
